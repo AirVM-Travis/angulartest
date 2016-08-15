@@ -1,0 +1,128 @@
+// COLOUR =============== *
+$col-primary: #005198
+$col-secondary: #00365b
+$col-tertiary: #1287ed
+
+$col-success: #7ac142
+$col-info: #1287ed
+$col-warning: #f1c116
+$col-danger: #c32026
+
+$col-background: #f5f5f5
+$col-text: #404040
+
+$col-borders: #c8c8c8
+$col-boxes: #ffffff
+$col-boxes-text: #212121
+
+// FONT =============== *
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,700,700italic)
+$font-stack: "Open Sans", Helvetica, Arial, sans-serif
+
+// LAYOUT =============== *
+$inc-header-height: 0px
+$inc-footer-height: 0px
+$wrapper-width: 100%
+
+
+// SASS FUNCTIONS =================== *
+
+@mixin gradient__oldtigerstyle($color)
+  
+  $grad-color-o: $color
+  $grad-color-d: darken($color,4%)
+  $grad-color-d2: tint($color,4%)
+  
+  background: $grad-color-o
+  background: -moz-linear-gradient(top,  $grad-color-o 0%, $grad-color-o 50%, $grad-color-d 50%, $grad-color-d2 100%)
+  background: -webkit-linear-gradient(top,  $grad-color-o 0%, $grad-color-o 50%, $grad-color-d 50%, $grad-color-d2 100%)
+  background: linear-gradient(to bottom,  $grad-color-o 0%, $grad-color-o 50%, $grad-color-d 50%, $grad-color-d2 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grad-color-o', endColorstr='$grad-color-d',GradientType=0 ) 
+
+@mixin gradient__lightdiag($color)
+  
+  $grad-color-o: $color
+  $grad-color-d: lighten($color,8%)
+  
+  background: $grad-color-o
+  background: -moz-linear-gradient(-45deg,  $grad-color-o 0%, $grad-color-d 100%)
+  background: -webkit-linear-gradient(-45deg,  $grad-color-o 0%, $grad-color-d 100%)
+  background: linear-gradient(135deg,  $grad-color-o 0%, $grad-color-d 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grad-color-o', endColorstr='$grad-color-d',GradientType=1 ) 
+
+@mixin gradient__darkdiag($color)
+  
+  $grad-color-o: $color
+  $grad-color-d: darken($color,6%)
+  
+  background: $grad-color-o
+  background: -moz-linear-gradient(-45deg,  $grad-color-o 0%, $grad-color-d 100%)
+  background: -webkit-linear-gradient(-45deg,  $grad-color-o 0%, $grad-color-d 100%)
+  background: linear-gradient(135deg,  $grad-color-o 0%, $grad-color-d 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grad-color-o', endColorstr='$grad-color-d',GradientType=1 ) 
+
+
+@mixin gradient__twocoldiag($colorA, $colorB)
+
+  background: $colorA
+  background: -moz-linear-gradient(-45deg,  $colorA 0%, $colorB 100%)
+  background: -webkit-linear-gradient(-45deg,  $colorA 0%, $colorB 100%)
+  background: linear-gradient(135deg,  $colorA 0%, $colorB 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorA', endColorstr='$colorB',GradientType=1 ) 
+
+
+/* COLOUR FUNCTIONS --- */
+
+@function tint($color, $percent)
+  @return mix(white, $color, $percent)
+
+@function shade($color, $percent)
+  @return mix(black, $color, $percent)
+
+@function blackorwhite($color)
+  @if (lightness($color) > 50)
+    @return #000000 /* Lighter backgorund, return dark color */
+  @else
+    @return #ffffff /* Darker background, return light color */
+
+//
+ * Calculates the sRGB luma of a colour.
+ *
+ * Math nicked from a great Thoughtbot article by Reda Lemeden:
+ * http://robots.thoughtbot.com/closer-look-color-lightness
+ */
+ 
+@function luma($c)
+  $-local-red: red(rgba($c, 1.0))
+  $-local-green: green(rgba($c, 1.0))
+  $-local-blue: blue(rgba($c, 1.0))
+  @return (0.2126 * $-local-red  + 0.7152 * $-local-green + 0.0722 * $-local-blue) / 255
+
+@function pick-contrast-color($bg, $c1, $c2)
+  $bg-luma: luma($bg)
+  $c1-luma: luma($c1)
+  $c2-luma: luma($c2)
+ 
+  $c1-diff: abs($bg-luma - $c1-luma)
+  $c2-diff: abs($bg-luma - $c2-luma)
+ 
+  @if $c1-diff > $c2-diff
+    @return $c1
+  @else
+    @return $c2
+
+// Select "Contrasting" Black or White against three main colours:
+$col-primary-contrast: pick-contrast-color($col-primary,black,white)
+$col-secondary-contrast: pick-contrast-color($col-secondary,black,white)
+$col-tertiary-contrast: pick-contrast-color($col-tertiary,black,white)
+
+$col-success-contrast: pick-contrast-color($col-primary,black,white)
+$col-info-contrast: pick-contrast-color($col-secondary,black,white)
+$col-warning-contrast: pick-contrast-color($col-tertiary,black,white)
+$col-danger-contrast: pick-contrast-color($col-primary,black,white)
+
+
+
+
+
+

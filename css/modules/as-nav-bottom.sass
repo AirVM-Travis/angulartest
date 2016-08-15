@@ -1,0 +1,358 @@
+/* AS-CORE NAVIGATION - PLACEMENT ONLY */
+
+.as__wrap
+  .main__content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 3em
+    width: 100%
+    -webkit-transition: all 0.5s ease-in-out
+    transition: all 0.5s ease-in-out
+    -webkit-transition-delay: 0s
+    transition-delay: 0s
+
+  .main__nav
+    position: absolute
+    width: 100%
+    height: 100%
+    bottom: 0
+    z-index: 2
+    -webkit-transition: width 0.5s
+    transition: width 0.5s
+    pointer-events: none
+
+  .main__nav__mask
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    right: 0 
+    bottom: 0
+    content: ''
+    display: block
+    opacity: 0
+    pointer-events: none
+    background: rgba(0,0,0,0.3)
+    z-index: 3
+    -webkit-transition: opacity 0.5s
+    transition: opacity 0.5s
+    -webkit-transition-delay: 0s
+    transition-delay: 0s
+    &.main__nav__mask--open
+      opacity: 1
+      pointer-events: auto
+      -webkit-transition: opacity 0.7s
+      transition: opacity 0.7s
+      -webkit-transition-delay: 0.3s
+      transition-delay: 0.3s
+
+  .main__nav__menu
+    z-index: 99
+    -webkit-transition: width 0.4s ease-in-out
+    transition: width 0.4s ease-in-out
+    -webkit-transition-delay: 0s
+    transition-delay: 0s
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+    li 
+      font-size: 1em
+      line-height: 1
+      margin: 0
+      padding: 0
+    a
+      display: block
+      min-height: 3em
+      padding: 0.5em 1em
+      font-size: 1em
+      overflow: hidden
+      -webkit-transition: color 0.3s, background 0.5s, box-shadow 0.3s, width 0.4s, height 0.4s
+      transition: color 0.3s, background 0.5s, box-shadow 0.3s, width 0.4s, height 0.4s
+      //box-shadow: inset 0 -1px rgba(0, 0, 0, 0.3)
+      &:link, &:visited
+        text-decoration: none
+      &:hover
+        /* background: $col-tertiary
+        /* color: $col-tertiary-contrast
+      i
+        display: inline-block
+        -webkit-transition: all 0.4s ease-in-out
+        transition: all 0.4s ease-in-out
+        -webkit-transition-delay: 0s
+        transition-delay: 0s
+        font-size: 1.6em
+        vertical-align: middle
+        margin-right: 0.4em
+      span
+        display: inline-block
+        font-size: 0.9em
+        line-height: 2.2 
+        vertical-align: middle
+        position: relative
+        top: 0
+        opacity: 1
+        -webkit-transition: opacity 0.5s, top 0.4s ease-in-out
+        transition: opacity 0.5s, top 0.4s ease-in-out
+        -webkit-transition-delay: 0.2s
+        transition-delay: 0.2s
+
+    .main__nav__menu__level__1
+      position: absolute
+      bottom: 0
+      width: 100%
+      z-index: 99
+      //overflow: auto
+      pointer-events: auto
+      background: $col-secondary
+      box-shadow: 1px 0 5px rgba(0, 0, 0, 0.4)
+      -webkit-transition: width 0.5s ease-in-out
+      transition: width 0.5s ease-in-out
+      ul > li
+        &.active 
+          a, a:link, a:visited, a:hover
+            color: $col-tertiary
+            background: $col-tertiary-contrast
+            //box-shadow: inset 0 -1px rgba($col-tertiary-contrast, 0.15)
+            i, span
+              color: $col-tertiary
+            &::before, &:hover::before
+              color: $col-tertiary
+        > a
+          outline: none
+          &:link, &:visited
+            color: rgba($col-secondary-contrast,0.7)
+            //box-shadow: inset 0 0px 3px rgba($col-secondary-contrast, 0.15)
+            //border-left: 1px solid rgba(white, 0.2)
+            //border-right: 1px solid rgba(black, 0.4)
+            display: block
+            float: left
+          &:hover
+            color: $col-tertiary-contrast
+            background: $col-tertiary
+            //box-shadow: inset 0 -1px rgba($col-tertiary-contrast, 0.15)
+            i
+              color: $col-tertiary-contrast
+          &.opensub
+            padding-right: 2em
+            position: relative
+            &::before
+              font-family: 'FontAwesome'
+              content: "\f106"
+              font-size: 1em
+              line-height: 1.8
+              position: absolute
+              right: 0.6em
+              color: rgba($col-primary-contrast,0.29)
+            &:hover::before
+              color: $col-tertiary-contrast
+          i 
+            color: rgba($col-secondary-contrast,0.7)
+              
+    .main__nav__menu__submenu
+      position: absolute
+      bottom: -100%
+      // opacity: 0
+      display: block
+      // overflow: auto
+      width: 100%
+      pointer-events: auto
+      color: $col-primary-contrast
+      background: $col-primary
+      z-index: 91
+      -webkit-transition: all 0.4s ease-in-out
+      transition: all 0.4s ease-in-out
+      font-size: 1em
+      /* height: 2.7em
+      &:hover
+        cursor: pointer
+        color: $col-tertiary
+      &::before
+        font-family: 'FontAwesome'
+        content: "\f107"
+        font-size: 1em
+        line-height: 2.9
+        position: absolute
+        left: 0.6em
+        color: rgba($col-primary,0.5)
+      i
+        font-size: 1.2em
+        line-height: 1.6
+        vertical-align: middle
+        margin-right: 0.4em
+      ul > li
+        display: inline
+        > a
+          display: block
+          float: left
+          font-size: 0.9em
+          line-height: 2
+          color: rgba($col-primary-contrast,0.7)
+          //border-left: 1px solid rgba(white, 0.2)
+          //border-right: 1px solid rgba(black, 0.4)
+          //box-shadow: inset 0 -1px rgba($col-primary-contrast, 0.15)
+          &.opensub
+            padding-right: 2em
+            position: relative
+            &::before
+              font-family: 'FontAwesome'
+              content: "\f106"
+              color: rgba($col-primary-contrast,0.29)
+              font-size: 1em
+              line-height: 2
+              position: absolute
+              right: 0.75em
+            &:hover::before
+              color: $col-tertiary-contrast
+          i
+            -webkit-transition-delay: 0s
+            transition-delay: 0s
+            color: rgba($col-primary-contrast,0.7)
+            font-size: 1em
+            line-height: 1
+          &:link, :visited
+            outline: none
+            -webkit-transition: all 0.3s
+            transition: all 0.3s
+            -webkit-transition-delay: 0s
+            transition-delay: 0s
+          &:hover
+            background: $col-tertiary
+            color: $col-tertiary-contrast
+            //box-shadow: inset 0 -1px rgba($col-tertiary-contrast, 0.15)
+            i, span
+              background: $col-tertiary
+              color: $col-tertiary-contrast
+        &.active 
+          > a, > a:link, > a:visited, > a:hover
+            background: $col-tertiary
+            color: $col-tertiary-contrast
+            //box-shadow: inset 0 -1px rgba($col-tertiary-contrast, 0.15)
+            &.subdrop-parent
+              &::before
+                color: $col-tertiary-contrast
+                content: "\f107"
+            i, span
+              color: $col-tertiary-contrast
+            &::before 
+              color: $col-tertiary-contrast
+    
+    .main__nav__menu__submenu__header
+      display: block
+      float: left
+      position: relative
+      background: $col-primary-contrast
+      color: $col-primary
+      font-size: 0.9em
+      line-height: 3
+      height: 3em
+      padding: 0 1em 0 1em
+      margin: 0
+      -webkit-transition: all 0.4s ease-in-out
+      transition: all 0.4s ease-in-out
+      
+
+    /* Level 2 Open
+    .main__nav__menu__submenu--open
+      z-index: 92
+      bottom: 3em
+      //opacity: 1
+      box-shadow: 1px 0 5px rgba(0, 0, 0, 0.4)
+      -webkit-transition: all 0.4s ease-in-out
+      transition: all 0.4s ease-in-out
+    /* Level 3+ Open
+    .main__nav__menu__level__3 .main__nav__menu__submenu--open
+      box-shadow: none
+      z-index: 93
+  .main__nav__menu__level__2--open.main__nav__menu__level__3--open 
+    .main__nav__menu__level__2
+      .main__nav__menu__submenu--open
+        background: darken($col-primary,15%)
+        pointer-events: none
+        ul
+          opacity: 0.6
+
+  /* Back
+  .main__nav__menu
+    .main__nav__menu__back
+      display: none !important
+      &:link, &:visited
+        background: rgba($col-primary-contrast,0.2)
+        box-shadow: inset 0 -1px rgba($col-primary-contrast, 0.15)
+        outline: none
+        color: rgba($col-primary-contrast,0.6)
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-weight: 700
+        display: block
+        font-size: 0.8em
+        line-height: 1.42
+        position: relative
+        -webkit-transition: background 0.3s
+        transition: background 0.3s
+        &:hover
+          background: $col-tertiary
+          color: $col-tertiary-contrast
+          box-shadow: inset 0 -1px rgba($col-tertiary-contrast, 0.15)
+        &::before
+          font-family: 'FontAwesome'
+          content: "\f100"
+          font-size: 1.2em
+          line-height: 1.2
+          color: rgba($col-primary-contrast,0.6)
+        &:hover::before
+          color: $col-tertiary-contrast
+
+  /* RESPONSIVE CODE ======================
+
+  @media (max-width: 767px)
+    //.push-content
+     
+    .main__nav__menu     
+      ul li
+        > a
+          font-size: 1em
+        &.menu-arrow-left > a i
+          margin-left: 0
+      .main__nav__menu__level__1      
+        > ul > li > a
+          &.opensub
+            padding: 0.5em 0.8em
+            position: relative
+            &::before
+              display: none
+          i 
+            // font-size: 1.6em
+            margin-right: 0
+          span
+            opacity: 0
+            position: absolute
+            bottom: -3em
+            -webkit-transition: opacity 0.3s ease-in-out
+            transition: opacity 0.3s ease-in-out
+            -webkit-transition-delay: 0s
+            transition-delay: 0s
+
+      .main__nav__menu__submenu
+        //height: 0 
+        ul > li
+          > a
+            display: block
+            float: none
+            font-size: 0.8em
+            line-height: 2
+      
+      .main__nav__menu__submenu__header
+        display: block
+        float: none
+        font-size: 0.8em
+        line-height: 3
+      .main__nav__menu__submenu--open
+        bottom: 3em
+        -webkit-transition: all 0.6s ease-out
+        transition: all 0.6s ease-out
+
+        

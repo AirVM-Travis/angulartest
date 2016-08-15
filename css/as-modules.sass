@@ -1,0 +1,4589 @@
+/*  AirSembly Modules.sass */
+/*  v3.0 "Aura" */
+
+
+
+.as__wrap
+
+  /* LOGIN WRAPPER */
+
+  &.as__wrap--login
+    height: 100%
+    width: 100%
+    padding: 4em 2em 0 2em
+    margin: 0 auto
+    overflow: auto
+
+  @media (max-width: 767px)
+    &.as__wrap--login
+      padding: 2em 1em 0 1em
+
+  /* ================== HEADER ==================
+
+  .header
+    height: 3em
+    width: 100%
+    position: absolute
+    top: 0
+    background: $col-primary
+    @include gradient__lightdiag($col-primary)
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+    z-index: 3
+    position: relative
+    .grid
+      padding: 0
+    //.btn + .btn, 
+    //.btn + .btn__group,
+    //.btn__group + .btn,
+    //.btn__group + .btn__group
+    //  margin-left: 1px !important
+
+  .header__util
+    position: relative
+
+  .header__search, 
+  .header__alerts
+    width: 18em
+    display: none
+    background: #fff
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4)
+    position: absolute
+    top: 3em
+    .form__group
+      margin-bottom: 3px
+    .btn--close
+      float: right
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      margin-left: 5px
+      font-size: 9px
+    .listgroup
+      margin: 0
+      padding: 0
+      border-radius: 0px
+    .listgroup--scrollable
+      max-height: 530px
+      overflow: auto
+    .listgroup__item
+      border-radius: 0 !important
+      border-left: none !important
+      border-right: none !important
+      border-bottom: none !important
+      font-size: 0.85em
+      line-height: 1.4
+      padding: 8px 8px
+      p
+        line-height: 1.4
+        margin-bottom: 0.5em
+      > *:last-child
+        margin-bottom: 2px
+      > i
+        margin-right: 0.25em
+        font-size: 1.25em
+        min-width: 1.25em
+
+  .header__util
+    .header__alerts
+      left: 3em
+    .header__search
+      left: 0
+      width: 240px
+      padding: 0.5em
+
+  .header__nav
+    .btn
+      font-size: 1em
+      min-width: 3em
+      min-height: 3em
+      margin: 0 0 0 0
+      border-radius: 0
+      border-bottom: none
+      line-height: 2
+      color: $col-primary-contrast
+      background: darken($col-primary, 15%)
+      position: relative
+      &:hover, &:focus
+        color: $col-tertiary-contrast
+        background: $col-tertiary
+      .badge
+        opacity: 0
+        position: absolute
+        top: 4px
+        right: 4px
+        font-size: 10px
+        padding: 0.5em
+        color: $col-primary-contrast
+        background: transparent
+        -webkit-animation-name: popin
+        -webkit-animation-duration: 0.6s
+        animation-name: popin
+        animation-duration: 0.6s
+        -webkit-animation-delay: 1s
+        animation-delay: 1s
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+        -webkit-animation-fill-mode: forwards
+        animation-fill-mode: forwards
+      i 
+        font-size: 130%
+        line-height: 1
+        vertical-align: middle
+    > .btn, 
+    > .btn__group
+      float: left
+      vertical-align: middle
+      position: relative
+      margin: 0
+    .btn__group > .btn
+      margin: 0
+      border-radius: 0
+      border-bottom: none
+      line-height: 2
+      color: $col-primary-contrast
+      background: darken($col-primary, 15%)
+      position: relative
+
+    .btn__group.open .dropdown__toggle.btn, .btn.btn-active
+      background-color: $col-tertiary !important
+      color: $col-tertiary-contrast !important
+
+  .header__user
+    float: right
+    .btn, .btn__group > .btn
+      background: transparent
+      &:hover
+        background-color: $col-tertiary
+    .header__alerts
+      top: 3em
+      right: 3em
+
+  .header__user__name 
+    font-size: 0.875em
+
+  .header__widget__container
+    float: left
+    margin: 0 6px
+
+  .header__widget
+    display: block
+    float: left
+    font-size: 12px
+    margin: 5px 0px 0 4px
+    height: 36px
+    line-height: 36px
+    padding: 0 12px 0 32px
+    border: 1px solid rgba($col-primary-contrast, 0.3)
+    border-radius: 3px
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4)
+    background: rgba(0, 0, 0, 0.15)
+    color: $col-primary-contrast
+    position: relative
+
+  .header__widget__content
+    -webkit-transition: all 0.5s ease-in-out
+    transition: all 0.5s ease-in-out
+
+  .header__widget__slide
+    float: left
+    display: none
+    i.fa
+      margin: 0 5px 0 0
+    &.active
+      display: block
+
+  .header__widget__controls
+    position: absolute
+    top: 0
+    left: 0px
+    a
+      color: rgba($col-primary-contrast, 0.5)
+      &:hover
+        color: $col-primary-contrast
+
+  @media (max-width: 767px)
+    .header
+      height: 2.5em
+    .header__window
+      top: 2.5em
+    .header__util .header__alerts
+      left: 0px
+    .header__user .header__alerts
+      top: 2.5em
+      right: 2.5em
+    .header__nav
+      .btn, .btn__group > .btn
+        min-width: 2.5em
+        min-height: 2.5em
+        line-height: 2
+        padding: 0
+
+  /* =================== FOOTER  =================== */
+
+  .footer
+    position: absolute
+    bottom: 0
+    height: 3em
+    width: 100%
+    background: $col-primary-contrast
+    z-index: 2
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.25)
+    line-height: 1
+    color: #999
+    .grid
+      padding: 0
+    .btn, .btn__group > .btn
+      min-width: 3em
+      min-height: 3em
+      padding: 0
+      margin: 0 0 0 0
+      border-radius: 0
+      border-bottom: none
+      line-height: 3em
+      background-color: rgba($col-primary, 0.1)
+      color: $col-primary
+      position: relative
+      font-size: 1em
+    .btn i, .btn__group > .btn i
+      font-size: 1.1em
+      line-height: 1
+    .btn
+      background-color: rgba($col-primary, 0.1)
+      color: $col-primary
+      border-radius: 0 !important
+      border: none
+      margin: 0 !important      
+      &:hover, &:focus
+        background-color: $col-tertiary
+        color: $col-tertiary-contrast
+    .btn__group > .btn
+      border-radius: 0 !important
+      border: none
+      margin: 0 !important
+
+  .footer__platform
+    float: right
+    padding-right: 0
+
+  .footer__platform__version
+    margin-right: 0.5em
+    line-height: 3em
+
+  .footer__platform 
+    .btn__group
+      display: block
+      float: right
+
+  @media (max-width: 767px)
+    .footer
+      .btn, .btn__group > .btn
+        min-width: 2.5em
+        min-height: 2.5em
+        line-height: 2
+      height: 2.5em
+      line-height: 2.5em
+      bottom: 0
+      border-bottom: 0
+    .footer__platform
+      height: 2.5em
+
+
+  /* =================== MAIN SECTION  =================== */
+  .main 
+    position: absolute
+    top: 3em
+    bottom: 3em
+    width: 100%
+    z-index: 1
+    overflow: hidden
+    background: darken($col-background,15%)
+    width: 100%
+
+  @media (max-width: 767px)
+    .main
+      top: 2.5em
+      bottom: 2.5em
+
+  .main__content
+    z-index: 1
+    color: $col-text
+    //background: $col-background
+    -webkit-transition: all 0.5s ease-in-out
+    transition: all 0.5s ease-in-out
+    -webkit-transition-delay: 0s
+    transition-delay: 0s
+
+  .main__content__inner
+    padding: 1.5em
+    overflow: auto
+
+  @media (max-width: 767px)
+    .main__content__inner
+      padding: 1em
+
+  .main__content__inner
+    background: $col-background
+    -webkit-transition: all 0.6s ease-in-out
+    transition: all 0.6s ease-in-out
+    position: absolute
+    z-index: 9
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+
+
+  /* LOADING =============== */
+
+  .loading
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 99
+    background: rgba($col-primary,0.93)
+    .loading__spinner
+      width: 64px
+      height: 64px
+      border-radius: 100%
+      margin: auto
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      margin: auto
+      .loading__spinner__mid
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 56px
+        height: 56px
+        border: 3px solid transparent
+        border-top: 3px solid $col-primary-contrast
+        border-radius: 100%
+        -webkit-animation: rotate 0.6s linear infinite
+        animation: rotate 0.6s linear infinite
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 42px
+        height: 42px
+        border: 3px solid transparent
+        border-bottom: 3px solid $col-primary-contrast
+        border-radius: 100%
+        -webkit-animation: rotate 0.4s linear infinite
+        animation: rotate 0.4s linear infinite
+        -webkit-animation-direction: reverse
+        animation-direction: reverse
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        border: 3px solid transparent
+        border-top: 3px solid $col-primary-contrast
+        border-radius: 100%
+        -webkit-animation: rotate 0.8s linear infinite
+        animation: rotate 0.8s linear infinite
+        width: 64px
+        height: 64px
+        -webkit-animation-direction: reverse
+        animation-direction: reverse
+
+    /* BRAND : Header or Footer =============== */
+
+  .brand
+    display: inline
+    font-size: 1.2em
+    line-height: 48px
+    margin: 0 8px
+
+  .brand__label
+    color: $col-primary
+    margin-left: 4px
+
+  .brand__logo
+    height: 46px
+    display: inline
+    img
+      width: auto
+      height: 40px
+      margin: 4px 8px 0 0
+      vertical-align: top
+  
+  @media (max-width: 767px)
+    .brand__logo 
+      img
+        height: 28px
+        margin-top: 6px
+
+
+  /* LIST ====================== */
+  .list
+    margin-bottom: 1em
+    li
+      margin-bottom: 0.5em
+
+  .list--stacked
+    margin: 0 0 1em 0
+
+  .list--unstyled
+    padding-left: 0
+    list-style: none
+    li 
+      margin: 0 0 0.25em 0
+
+  .list--inline
+    padding-left: 0
+    margin-left: -5px
+    list-style: none
+    > li
+      display: inline-block
+      padding-right: 5px
+      padding-left: 5px
+
+  .list--lg
+    li
+      font-size: 1.25em
+      line-height: 1.6
+      margin-bottom: 0.5em
+
+  .list--tree 
+    list-style: none
+    padding-left: 0
+    > li
+      font-weight: 700
+      margin-bottom: 0.5em
+      ul
+        list-style: none
+        padding-left: 0
+        margin-top: 0.25em
+        > li
+          font-weight: 400
+          margin-bottom: 0.25em
+          padding-left: 0.25em
+          &:before
+            width: 0.75em
+            height: 0.75em
+            margin-right: 0.5em
+            border-left: 1px solid $col-borders
+            border-bottom: 1px solid $col-borders
+            display: block
+            float: left
+            content: ''
+          ul 
+            padding-left: 1em
+
+  /* TABLES ====================== */
+
+  .table
+    width: 100%
+    max-width: 100%
+    margin-bottom: 1rem
+    border-bottom: 1px solid $col-borders
+    font-size: 1rem
+    >
+      thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
+        padding: 0.875em
+        line-height: 1.42857143
+        vertical-align: middle
+        /* most tables are fine with this
+        border-top: 1px solid $col-borders
+        font-size: 0.85em
+    >
+      thead > tr > th
+        vertical-align: bottom
+        border-bottom: 2px solid $col-borders
+        background-color: $col-primary
+        color: $col-primary-contrast
+        a
+          color: $col-primary-contrast
+      tbody > tr > th
+        text-align: right
+        font-weight: bold
+        background: $col-boxes
+        color: $col-boxes-text
+      caption + thead > tr:first-child > th, colgroup + thead > tr:first-child > th, thead:first-child > tr:first-child > th, caption + thead > tr:first-child > td, colgroup + thead > tr:first-child > td, thead:first-child > tr:first-child > td
+        border-top: 0
+      tbody + tbody
+        border-top: 2px solid $col-borders
+    .table
+      background-color: $col-boxes
+
+  .table > tbody > tr > td
+    .btn, .form__group__checkbox, .form__group__radio
+      margin-top: 0
+      margin-bottom: 0
+
+  .table >
+    thead > tr > td.active, tbody > tr > td.active, tfoot > tr > td.active, thead > tr > th.active, tbody > tr > th.active, tfoot > tr > th.active, thead > tr.active > td, tbody > tr.active > td, tfoot > tr.active > td, thead > tr.active > th, tbody > tr.active > th, tfoot > tr.active > th
+      background-color: rgba($col-primary,0.2)
+      color: $col-boxes-text
+      a:link, a:visited
+        color: $col-primary
+      a:hover
+        color: $col-tertiary
+
+  .table--condensed >
+    thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
+      padding: 5px
+
+  .table--bordered
+    border: 1px solid $col-borders
+    >
+      thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
+        border: 1px solid $col-borders
+      thead > tr >
+        th, td
+          border-bottom-width: 2px
+
+  .table--striped > tbody > tr:nth-of-type(even)
+    background-color: rgba($col-boxes-text,0.06)
+
+  .table--hover > tbody > tr:hover td, .table-hover > tbody > tr:hover th
+    background-color: rgba($col-tertiary,0.2)
+    color: $col-tertiary
+
+  .table--hover > tbody > tr
+    >
+      td.active:hover, th.active:hover
+        background-color: rgba($col-tertiary,1)
+        color: $col-tertiary-contrast
+    &.active:hover > td, &:hover > .active, &.active:hover > th
+      background-color: rgba($col-tertiary,1)
+      color: $col-tertiary-contrast
+
+  .table >
+    thead > tr > td.has--success, tbody > tr > td.has--success, tfoot > tr > td.has--success, thead > tr > th.has--success, tbody > tr > th.has--success, tfoot > tr > th.has--success, thead > tr.has--success > td, tbody > tr.has--success > td, tfoot > tr.has--success > td, thead > tr.has--success > th, tbody > tr.has--success > th, tfoot > tr.has--success > th
+      background-color: rgba($col-success,0.2)
+
+  .table--hover > tbody > tr
+    >
+      td.has--success:hover, th.has--success:hover
+        background-color: rgba($col-success,0.5)
+        color: $col-boxes-text
+    &.has--success:hover > td, &:hover > .has--success, &.has--success:hover > th
+      background-color: rgba($col-success,0.5)
+      color: $col-boxes-text
+
+  .table >
+    thead > tr > td.has--info, tbody > tr > td.has--info, tfoot > tr > td.has--info, thead > tr > th.has--info, tbody > tr > th.has--info, tfoot > tr > th.has--info, thead > tr.has--info > td, tbody > tr.has--info > td, tfoot > tr.has--info > td, thead > tr.has--info > th, tbody > tr.has--info > th, tfoot > tr.has--info > th
+      background-color: rgba($col-info, 0.2)
+
+  .table--hover > tbody > tr
+    >
+      td.has--info:hover, th.has--info:hover
+        background-color: rgba($col-info,0.5)
+        color: $col-boxes-text
+    &.has--info:hover > td, &:hover > .has--info, &.has--info:hover > th
+      background-color: rgba($col-info,0.5)
+      color: $col-boxes-text
+
+  .table >
+    thead > tr > td.has--warning, tbody > tr > td.has--warning, tfoot > tr > td.has--warning, thead > tr > th.has--warning, tbody > tr > th.has--warning, tfoot > tr > th.has--warning, thead > tr.has--warning > td, tbody > tr.has--warning > td, tfoot > tr.has--warning > td, thead > tr.has--warning > th, tbody > tr.has--warning > th, tfoot > tr.has--warning > th
+      background-color: rgba($col-warning, 0.2)
+
+  .table--hover > tbody > tr
+    >
+      td.has--warning:hover, th.has--warning:hover
+        background-color: rgba($col-warning,0.5)
+        color: $col-boxes-text
+    &.has--warning:hover > td, &:hover > .has--warning, &.has--warning:hover > th
+      background-color: rgba($col-warning,0.5)
+      color: $col-boxes-text
+
+  .table >
+    thead > tr > td.has--danger, tbody > tr > td.has--danger, tfoot > tr > td.has--danger, thead > tr > th.has--danger, tbody > tr > th.has--danger, tfoot > tr > th.has--danger, thead > tr.has--danger > td, tbody > tr.has--danger > td, tfoot > tr.has--danger > td, thead > tr.has--danger > th, tbody > tr.has--danger > th, tfoot > tr.has--danger > th
+      background-color: rgba($col-danger, 0.2)
+
+  .table--hover > tbody > tr
+    >
+      td.has--danger:hover, th.has--danger:hover
+        background-color: rgba($col-danger,0.5)
+        color: $col-boxes-text
+    &.has--danger:hover > td, &:hover > .has--danger, &.has--danger:hover > th
+      background-color: rgba($col-danger,0.5)
+      color: $col-boxes-text
+
+  @media screen and (max-width: 767px)
+    .grid--responsive
+      >
+        .table
+          margin-bottom: 0       
+          >
+            thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
+              white-space: nowrap
+        .table--bordered
+          border: 0
+          >
+            thead > tr > th:first-child, tbody > tr > th:first-child, tfoot > tr > th:first-child, thead > tr > td:first-child, tbody > tr > td:first-child, tfoot > tr > td:first-child
+              border-left: 0
+            thead > tr > th:last-child, tbody > tr > th:last-child, tfoot > tr > th:last-child, thead > tr > td:last-child, tbody > tr > td:last-child, tfoot > tr > td:last-child
+              border-right: 0
+            tbody > tr:last-child > th, tfoot > tr:last-child > th, tbody > tr:last-child > td, tfoot > tr:last-child > td
+              border-bottom: 0
+
+  .table__row--accordion > td
+    padding: 0 !important
+    background: rgba($col-boxes-text,0.07)
+    border: none !important
+
+  .table__row--accordion__body
+    padding: 1em
+    border-top: 0
+    box-shadow: inset 0 5px 15px rgba(0,0,0,0.07)
+    > *:last-child
+      margin-bottom: 0
+
+  .table__row--accordion__sublist
+    padding: 0
+    box-shadow: inset 0 5px 15px rgba(0,0,0,0.125)
+    background: rgba(0,0,0,0.2)
+    > *:last-child
+      margin-bottom: 0
+    .table
+      border-left: 0.25em solid $col-primary
+      border-bottom: 0
+      margin-bottom: 0
+      //background-color: $col-background
+      tr.active td
+        background-color: rgba($col-primary,0.1)
+      td:first-child 
+        min-width: 7.75em
+      td
+        background: rgba($col-boxes-text,0.07)
+    div[class*="grid__col--"]
+      margin-bottom: 0
+    .table__row--accordion__sublist
+      padding: 0 0 0 0.5em
+      .table 
+        border-left-color: $col-secondary
+        tr
+          &.active td
+            background-color: $col-boxes
+            color: $col-boxes-text
+            //a:link, a:visited
+            //  color: $col-secondary-contrast
+            //a:hover
+            //  color: $col-tertiary
+          td:first-child 
+            min-width: 5.5em
+          td
+            background: rgba($col-boxes-text,0.15)
+          .table__row--accordion__body
+            background: rgba($col-boxes-text,0.07)
+
+  .table__row--total
+    font-size: 2em
+    background: rgba($col-primary, 0.15)
+
+  .table__row--title
+    font-weight: 700
+
+
+  /* NAVIGATION MODULE =============== */
+
+  .nav
+    list-style: none
+    font-size: 0.875em
+    padding-left: 0
+    margin-bottom: 1em
+    > li
+      position: relative
+      display: block
+      > a
+        position: relative
+        display: block
+        padding: 0.5em 1em 
+        background-color: $col-boxes
+        border: 1px solid $col-primary
+        color: $col-primary
+        > img
+          max-width: none
+        &:hover
+          text-decoration: none
+          color: $col-tertiary
+          border-color: $col-tertiary
+          background-color: rgba($col-tertiary,0.08)
+        &:active, &:focus
+          background-color: $col-tertiary
+          color: $col-tertiary-contrast
+          border-color: $col-tertiary
+      &.active > a
+        background-color: $col-primary
+        color: $col-primary-contrast
+      &.table__row--accordion__sublist  > a
+        color: rgba($col-text,0.5)
+        &:hover, &:focus
+          color: rgba($col-text,0.5)
+          text-decoration: none
+          cursor: not-allowed
+          background-color: transparent
+    .open > a
+      background-color: $col-tertiary
+      color: $col-tertiary-contrast
+      /*  border-color: #b8b8b8;
+      &:hover, &:focus
+        background-color: $col-tertiary
+        color: $col-tertiary-contrast
+        /*  border-color: #b8b8b8;
+    &.nav--sm
+      font-size: 11px
+      > li > a
+        padding: 4px 8px
+    .nav__divider
+      height: 1px
+      margin: 9px 0
+      overflow: hidden
+      background-color: $col-borders
+    .nav__label
+      display: inline-block
+      line-height: 1.8
+      margin: 0px 0.25em 0px 0
+      padding: 0
+    .nav__item--warning 
+      > a
+        background: $col-warning
+        color: white
+        &:hover, &:focus
+          background-color: darken($col-warning,15%)
+    .nav__item--danger 
+      > a
+        background: $col-danger
+        color: white
+        &:hover, &:focus
+          background-color: darken($col-danger,15%)
+    .nav__item--success 
+      > a
+        background: $col-success
+        color: white
+        &:hover, &:focus
+          background-color: darken($col-success,15%)
+    .nav__item--info 
+      > a
+        background: $col-info
+        color: white
+        &:hover, &:focus
+          background-color: darken($col-info,15%)
+
+  /* nav--tabs */
+
+  .nav--tabs
+    //margin-bottom: 0
+    border-bottom: 1px solid $col-primary
+    > li
+      float: left
+      margin-bottom: -1px
+      > a
+        margin-right: 6px
+        line-height: 1.42857143
+        border-radius: 4px 4px 0 0
+        border-color: $col-primary
+        border-bottom-color: transparent
+        background-color: transparent
+        &:hover
+          border-bottom-color: transparent
+      &.active > a
+        color: $col-primary-contrast
+        cursor: default
+        border-color: $col-primary
+        background-color: $col-primary
+        border-bottom-color: transparent
+        &:hover, &:focus
+          color: $col-primary-contrast
+          cursor: default
+          background-color: $col-primary
+          border-bottom-color: transparent 
+    .dropdown__menu
+      margin-top: -1px
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+    .nav--justified
+      width: 100%
+      border-bottom: 0
+      >
+        li
+          float: none
+          > a
+            margin-bottom: 5px
+            text-align: center
+        .dropdown .dropdown__menu
+          top: auto
+          left: auto
+        li > a
+          margin-right: 0
+          border-radius: 4px
+        .active > a
+          border: 1px solid $col-borders
+          &:hover, &:focus
+            border: 1px solid $col-borders
+
+  @media (min-width: 768px)
+    .nav--tabs.nav-justified > li
+      display: table-cell
+      width: 1%
+      > a
+        margin-bottom: 0
+
+  @media (min-width: 768px)
+    .nav--tabs.nav-justified >
+      li > a
+        border-bottom: 1px solid $col-borders
+        border-radius: 4px 4px 0 0
+      .active > a
+        border-bottom-color: #fff
+        &:hover, &:focus
+          border-bottom-color: #fff
+
+  .nav--pills > li
+    margin-right: 6px
+    margin-bottom: 6px
+    float: left
+    > a
+      border-radius: 10em
+    &.active > a
+      color: $col-primary-contrast
+      background-color: $col-primary
+      &:hover, &:focus
+        color: $col-primary-contrast
+        background-color: $col-primary
+
+  .nav--boxes 
+    margin-bottom: 1.5em
+
+  .nav--boxes > li
+    float: left
+    text-align: center
+    margin-right: 3px
+    margin-bottom: 3px
+    &.nav-nav__divider 
+      background: none
+      width: 1px
+      margin: 0 9px 0 6px
+    > a
+      border-radius: 4px
+      min-width: 6em
+      padding: 0.5em
+      font-size: 90%
+      > i 
+        display: block
+        font-size: 180% 
+        line-height: 1.6
+        margin-bottom: 0.1em
+    //+ li 
+    //  margin-left: 3px
+
+  .nav--stacked > li
+    float: none
+    > a 
+      border-radius: 4px
+    + li
+      margin-top: 2px
+      margin-left: 0
+    i
+      min-width: 1.1em
+      text-align: center
+      margin-right: 0.6em
+
+  .nav--justified
+    width: 100%
+    >
+      li
+        float: none
+        > a
+          margin-bottom: 5px
+          text-align: center
+      .dropdown .dropdown__menu
+        top: auto
+        left: auto
+
+  @media (min-width: 768px)
+    .nav--justified > li
+      display: table-cell
+      width: 1%
+      > a
+        margin-bottom: 0
+
+  .nav--tabs--justified
+    border-bottom: 0
+    >
+      li > a
+        margin-right: 0
+        border-radius: 4px
+      .active > a
+        border: 1px solid $col-borders
+        &:hover, &:focus
+          border: 1px solid $col-borders
+
+  @media (min-width: 768px)
+    .nav--tabs--justified >
+      li > a
+        border-bottom: 1px solid $col-borders
+        border-radius: 4px 4px 0 0
+      .active > a
+        border-bottom-color: #fff
+        &:hover, &:focus
+          border-bottom-color: #fff
+
+  .tab__content
+    //background: $col-boxes
+    //color: $col-boxes-text
+    > .tab__content__pane
+      display: none
+      //color: $col-boxes-text
+      //background: $col-boxes
+      //padding: 1em
+    &.tab__content--horizontal > .tab__content__pane
+      padding: 0
+    > .active
+      display: block
+
+  
+
+  /* NAVBAR =============== */
+
+  .navbar 
+    position: relative
+    min-height: 50px
+    margin-bottom: 20px
+    border: 1px solid transparent
+
+  .grid__row > div > .navbar:last-child 
+    margin-bottom: 0
+
+  @media (min-width: 768px)
+    .navbar
+      border-radius: 4px
+
+  @media (min-width: 768px)
+    .navbar__header
+      float: left
+
+  .navbar__collapse
+    padding-right: 15px
+    padding-left: 15px
+    overflow-x: visible
+    -webkit-overflow-scrolling: touch
+    border-top: 1px solid transparent
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+    &.in
+      overflow-y: auto
+
+  @media (min-width: 768px)
+    .navbar__collapse
+      width: auto
+      border-top: 0
+      -webkit-box-shadow: none
+      box-shadow: none
+      &.collapse
+        display: block !important
+        height: auto !important
+        padding-bottom: 0
+        overflow: visible !important
+      &.in
+        overflow-y: visible
+    .navbar--fixed--top .navbar__collapse, .navbar--static--top .navbar__collapse, .navbar--fixed--bottom .navbar__collapse
+      padding-right: 0
+      padding-left: 0
+
+  .navbar--fixed--top .navbar__collapse, .navbar--fixed--bottom .navbar__collapse
+    max-height: 340px
+
+  @media (max-device-width: 480px) and (orientation: landscape)
+    .navbar--fixed--top .navbar__collapse, .navbar--fixed--bottom .navbar__collapse
+      max-height: 200px
+
+  .grid > .navbar__header, .grid--fluid > .navbar__header, .grid > .navbar__collapse, .grid--fluid > .navbar__collapse
+    margin-right: -15px
+    margin-left: -15px
+
+  @media (min-width: 768px)
+    .grid > .navbar__header, .grid--fluid > .navbar__header, .grid > .navbar__collapse, .grid--fluid > .navbar__collapse
+      margin-right: 0
+      margin-left: 0
+
+  .navbar--static--top
+    z-index: 1000
+    border-width: 0 0 1px
+
+  @media (min-width: 768px)
+    .navbar--static--top
+      border-radius: 0
+
+  .navbar--fixed--top, .navbar--fixed--bottom
+    position: fixed
+    right: 0
+    left: 0
+    z-index: 1030
+
+  @media (min-width: 768px)
+    .navbar--fixed--top, .navbar--fixed--bottom
+      border-radius: 0
+
+  .navbar--fixed--top
+    top: 0
+    border-width: 0 0 1px
+
+  .navbar--fixed--bottom
+    bottom: 0
+    margin-bottom: 0
+    border-width: 1px 0 0
+
+  .navbar__brand
+    float: left
+    //height: 50px
+    padding: 5px 15px
+    font-size: 16px
+    line-height: 42px
+    &:hover, &:focus
+      text-decoration: none
+    > img
+      display: block
+    > .navbar__form
+      padding: 0
+      margin: 0 15px 0 0
+
+  @media (min-width: 768px)
+    .navbar >
+      .grid .navbar__brand, .grid--fluid .navbar__brand
+        margin-left: -15px
+
+  .navbar__toggle
+    position: relative
+    float: right
+    padding: 9px 10px
+    margin-top: 8px
+    margin-right: 15px
+    margin-bottom: 5px
+    background-color: transparent
+    background-image: none
+    border: 1px solid transparent
+    border-radius: 4px
+    &:focus
+      outline: 0
+    .icon-bar
+      display: block
+      width: 22px
+      height: 2px
+      border-radius: 1px
+      + .icon-bar
+        margin-top: 4px
+
+  @media (min-width: 768px)
+    .navbar__toggle
+      display: none
+
+  .navbar__nav
+    margin: 7.5px -15px
+    > li > a
+      padding-top: 10px
+      padding-bottom: 10px
+      line-height: 22px
+      font-size: 14px
+      border: none
+      i
+        font-size: 140%
+        vertical-align: middle
+        margin-left: 0.25em 
+        margin-right: 0.25em
+
+  @media (max-width: 767px)
+    .navbar__nav .open .dropdown__menu
+      position: static
+      float: none
+      width: auto
+      margin-top: 0
+      background-color: transparent
+      border: 0
+      -webkit-box-shadow: none
+      box-shadow: none
+      > li > a, .dropdown__header
+        padding: 5px 15px 5px 15px
+      > li > a
+        line-height: 20px
+        &:hover, &:focus
+          background-image: none
+
+  @media (min-width: 768px)
+    .navbar__nav
+      float: left
+      margin: 0
+      > li
+        float: left
+        > a
+          padding-top: 15px
+          padding-bottom: 15px
+
+  .navbar__form
+    padding: 10px 10px
+    margin-top: 8px
+    margin-right: -15px
+    margin-bottom: 5px
+    margin-left: -15px
+    border-top: 1px solid transparent
+    border-bottom: 1px solid transparent
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1)
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1)
+
+  @media (min-width: 768px)
+    .navbar__form
+      .form__group
+        display: inline-block
+        margin-bottom: 0
+        vertical-align: middle
+      .form__control
+        display: inline-block
+        width: auto
+        vertical-align: middle
+      .form__control--static
+        display: inline-block
+      .form__inputgroup
+        display: inline-table
+        vertical-align: middle
+        .form__inputgroup__addon, .form__inputgroup__btn, .form__control
+          width: auto
+        > .form__control
+          width: 100%
+      .form__label
+        margin-bottom: 0
+        vertical-align: middle
+      .form__group__radio, .form__group__checkbox
+        display: inline-block
+        margin-top: 0
+        margin-bottom: 0
+        vertical-align: middle
+      .form__group__radio label, .form__group__checkbox label
+        padding-left: 0
+      .form__group__radio input[type="radio"], .form__group__checkbox input[type="checkbox"]
+        position: relative
+        margin-left: 0
+      .has--feedback .form__control__feedback
+        top: 0
+
+  @media (max-width: 767px)
+    .navbar__form .form__group
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+
+  @media (min-width: 768px)
+    .navbar__form
+      width: auto
+      padding-top: 0
+      padding-bottom: 0
+      margin-right: 0
+      margin-left: 0
+      border: 0
+      -webkit-box-shadow: none
+      box-shadow: none
+
+  .navbar__nav > li > .dropdown__menu
+    margin-top: 0
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+
+  .navbar--fixed--bottom .navbar__nav > li > .dropdown__menu
+    margin-bottom: 0
+    border-top-left-radius: 4px
+    border-top-right-radius: 4px
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
+
+  .navbar__btn
+    margin-top: 8px
+    margin-bottom: 8px
+    &.btn--sm
+      margin-top: 10px
+      margin-bottom: 10px
+    &.btn--xs
+      margin-top: 14px
+      margin-bottom: 14px
+
+  .navbar__text
+    margin-top: 15px
+    margin-bottom: 15px
+
+  @media (min-width: 768px)
+    .navbar__text
+      float: left
+      margin-right: 15px
+      margin-left: 15px
+
+  @media (min-width: 768px)
+    .navbar__left
+      float: left !important
+    .navbar__right
+      float: right !important
+      margin-right: -15px
+      ~ .navbar__right
+        margin-right: 0
+
+  .navbar--condensed
+    > .grid--fluid
+      padding: 0
+      .navbar__brand
+        margin: 0
+      .navbar__nav
+        width: 100%
+        li
+          width: 100%
+          a
+            white-space: nowrap
+            display: block
+            overflow: hidden
+            text-overflow: ellipsis
+            word-break: break-all
+            padding-right: 1.5em
+            .caret
+              position: absolute
+              top: 45%
+              right: 0.875em
+          &.open
+            .dropdown__menu
+              width: 100%
+
+  @media (max-width: 767px)
+    .navbar--condensed
+      min-height: auto
+      .navbar__nav
+        margin: 0
+
+  .navbar--default
+    background-color: $col-boxes
+    border-color: $col-borders
+    border-bottom-width: 2px
+    .navbar__brand
+      color: $col-primary
+      background: rgba($col-primary,0.15)
+      &:hover, &:focus
+        color: $col-tertiary
+        background-color: rgba($col-tertiary,0.15)
+    .navbar__text
+      color: $col-text
+    .navbar__nav >
+      li > a
+        color: $col-primary
+        background: transparent
+        &:hover, &:focus
+          color: $col-tertiary
+          background-color: rgba($col-tertiary,0.15)
+      .active > a
+        color: #fff
+        background-color: $col-primary
+        &:hover, &:focus
+          color: #fff
+          background-color: $col-primary
+      .disabled > a
+        color: $col-primary
+        background-color: transparent
+        &:hover, &:focus
+          color: $col-primary
+          background-color: transparent
+    .navbar__toggle
+      border-color: #ddd
+      &:hover, &:focus
+        background-color: #ddd
+      .icon-bar
+        background-color: #888
+    .navbar__collapse, .navbar__form
+      //border-color: $col-borders
+    .navbar__nav
+      > .open > a
+        color: $col-tertiary-contrast
+        background-color: $col-tertiary
+        &:hover, &:focus
+          color: $col-tertiary-contrast
+          background-color: $col-tertiary
+      .open .dropdown__menu >
+        li > a
+          color: $col-primary
+          &:hover, &:focus
+            color: $col-tertiary
+            background-color: rgba($col-tertiary, 0.15)
+        .active > a
+          color: #555
+          background-color: #e7e7e7
+          &:hover, &:focus
+            color: #555
+            background-color: #e7e7e7
+        .disabled > a
+          color: #ccc
+          background-color: transparent
+          &:hover, &:focus
+            color: #ccc
+            background-color: transparent
+    .navbar__link
+      color: #777
+      &:hover
+        color: #333
+    .btn--link
+      color: #777
+      &:hover, &:focus
+        color: #333
+      &[disabled]:hover
+        color: #ccc
+
+  fieldset[disabled] .navbar--default .btn--link:hover, .navbar--default .btn--link[disabled]:focus, fieldset[disabled] .navbar--default .btn--link:focus
+    color: #ccc
+
+  .navbar--inverse
+    background-color: $col-boxes-text
+    border-color: $col-borders
+    .navbar__brand
+      color: $col-boxes
+      background: rgba($col-boxes,0.15)
+      &:hover, &:focus
+        color: $col-tertiary-contrast
+        background-color: rgba($col-tertiary,0.8)
+    .navbar__text
+      color: $col-boxes
+    .navbar__nav >
+      li > a
+        color: $col-boxes
+        background-color: transparent
+        &:hover, &:focus
+          color: $col-tertiary-contrast
+          background-color: rgba($col-tertiary,0.8)
+      .active > a
+        color: $col-primary-contrast
+        background-color: $col-primary
+        &:hover, &:focus
+          color: $col-primary-contrast
+          background-color: $col-primary
+      .disabled > a
+        color: $col-boxes
+        background-color: transparent
+        &:hover, &:focus
+          color: $col-boxes
+          background-color: transparent
+    .navbar__toggle
+      border-color: #333
+      &:hover, &:focus
+        background-color: #333
+      .icon-bar
+        background-color: #fff
+    .navbar__collapse, .navbar__form
+      //border-color: #101010
+    .navbar__nav > .open > a
+      color: #fff
+      background-color: #080808
+      &:hover, &:focus
+        color: #fff
+        background-color: #080808
+    .navbar__link
+      color: #9d9d9d
+      &:hover
+        color: #fff
+    .btn--link
+      color: #9d9d9d
+      &:hover, &:focus
+        color: #fff
+      &[disabled]:hover
+        color: #444
+
+  @media (max-width: 767px)
+    .navbar--inverse .navbar__nav .open .dropdown__menu
+      > .dropdown__header
+        border-color: #080808
+      .nav__divider
+        background-color: #080808
+      >
+        li > a
+          color: #9d9d9d
+          &:hover, &:focus
+            color: #fff
+            background-color: transparent
+        .active > a
+          color: #fff
+          background-color: #080808
+          &:hover, &:focus
+            color: #fff
+            background-color: #080808
+        .disabled > a
+          color: #444
+          background-color: transparent
+          &:hover, &:focus
+            color: #444
+            background-color: transparent
+
+  fieldset[disabled] .navbar--inverse .btn--link:hover, .navbar--inverse .btn--link[disabled]:focus, fieldset[disabled] .navbar--inverse .btn--link:focus
+    color: #444
+
+  /* NAVBAR - PRIMARY
+
+  .navbar--primary
+    background-color: $col-primary
+    border-color: $col-borders
+    .navbar__brand
+      color: $col-primary-contrast
+      background: rgba($col-primary-contrast,0.2)
+      &:hover, &:focus
+        color: $col-tertiary
+        background-color: rgba($col-tertiary,0.15)
+    .navbar__text
+      color: $col-primary-contrast
+    .navbar__nav >
+      li > a
+        color: $col-primary-contrast
+        background-color: transparent
+        &:hover, &:focus
+          color: $col-primary-contrast
+          background-color: rgba($col-primary-contrast,0.15)
+      .active > a
+        color: $col-primary
+        background-color: $col-primary-contrast
+        &:hover, &:focus
+          color: $col-primary
+          background-color: $col-primary-contrast
+      .disabled > a
+        color: $col-primary-contrast
+        background-color: transparent
+        &:hover, &:focus
+          color: $col-primary-contrast
+          background-color: transparent
+    .navbar__toggle
+      border-color: $col-primary-contrast
+      &:hover, &:focus
+        background-color: rgba($col-primary-contrast, 0.5)
+      .icon-bar
+        background-color: $col-primary-contrast
+    .navbar__collapse, .navbar__form
+      //border-color: $col-borders
+    .navbar__nav > .open > a
+      color: $col-primary-contrast
+      background-color: rgba($col-primary-contrast, 0.5)
+      &:hover, &:focus
+        color: $col-tertiary-contrast
+        background-color: $col-tertiary
+    .navbar__link
+      color: $col-primary-contrast
+      &:hover
+        color: $col-tertiary-contrast
+    .btn--link
+      color: #9d9d9d
+      &:hover, &:focus
+        color: #fff
+      &[disabled]:hover
+        color: #444
+
+  @media (max-width: 767px)
+    .navbar--primary .navbar__nav .open .dropdown__menu
+      > .dropdown__header
+        border-color: rgba($col-primary-contrast, 0.5)
+      .nav__divider
+        background-color: rgba($col-primary-contrast, 0.5)
+      >
+        li > a
+          color: rgba($col-primary-contrast, 0.8)
+          &:hover, &:focus
+            color: $col-primary-contrast
+            background-color:  rgba($col-primary-contrast, 0.2)
+        .active > a
+          color: $col-primary-contrast
+          background-color: rgba($col-primary-contrast, 0.5)
+          &:hover, &:focus
+            color: $col-primary-contrast
+            background-color: rgba($col-primary-contrast, 0.5)
+        .disabled > a
+          color: #444
+          background-color: transparent
+          &:hover, &:focus
+            color: #444
+            background-color: transparent
+
+  fieldset[disabled] .navbar--primary .btn--link:hover, .navbar--primary .btn--link[disabled]:focus, fieldset[disabled] .navbar--primary .btn--link:focus
+    color: #444
+
+
+  /* BUTTONS =============== */
+
+  .btn
+    display: inline-block
+    padding: 0.375rem 0.75rem
+    margin-bottom: 3px
+    font-family: $font-stack
+    font-size: 0.875rem
+    font-weight: normal
+    line-height: 1.42
+    text-align: center
+    border: none
+    border-radius: 0.25rem
+    border-bottom: 2px solid rgba(0,0,0,0.25)
+    background: #ddd
+    color: #404040
+    white-space: nowrap
+    vertical-align: middle
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+    cursor: pointer
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    background-image: none
+    -webkit-transition: background 0.15s ease-in-out
+    transition: background 0.15s ease-in-out
+    &:hover, &:focus
+      outline: 0
+      background-image: none
+      background: #b8b8b8
+      color: #000
+      text-decoration: none
+    &:active, &.active, &.active:focus
+      padding: 0.25rem 0.75rem 0.5rem 0.75rem
+      -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25)
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25)
+    &.disabled, &[disabled]
+      //pointer-events: none
+      cursor: not-allowed
+      filter: alpha(opacity = 60)
+      -webkit-box-shadow: none
+      box-shadow: none
+      opacity: .6
+    .badge
+      color: #404040
+      background-color: #fff
+      position: relative
+      top: -1px
+
+  .open > .dropdown__toggle.btn
+    color: $col-tertiary-contrast
+    background-color: $col-tertiary
+
+  .btn
+    &.disabled, &[disabled],
+    &.disabled:hover, &[disabled]:hover,
+    &.disabled:focus, &[disabled]:focus,
+    &.disabled.focus, &[disabled].focus,
+    &.disabled:active, &[disabled]:active,
+    &.disabled.active, &[disabled].active
+      background: #ddd
+      color: #404040
+
+  fieldset[disabled] .btn,
+  fieldset[disabled] .btn:hover,
+  fieldset[disabled] .btn:focus,
+  fieldset[disabled] .btn.focus,
+  fieldset[disabled] .btn:active,
+  fieldset[disabled] .btn.active
+    background: #ddd
+    color: #404040
+
+  .btn--primary
+    color: $col-primary-contrast
+    background-color: $col-primary
+    .badge
+      color: $col-primary
+      background-color: $col-primary-contrast
+    &:hover, &:focus, &:active, &.active
+      color: $col-primary-contrast
+      background-color: darken($col-primary, 15%)
+      border-color: transparent
+
+  .open > .dropdown__toggle.btn--primary
+    color: $col-primary-contrast
+    background-color: darken($col-primary, 15%)
+
+  .btn--primary
+    &.disabled, &[disabled],
+    &.disabled:hover, &[disabled]:hover,
+    &.disabled:focus, &[disabled]:focus,
+    &.disabled.focus, &[disabled].focus,
+    &.disabled:active, &[disabled]:active,
+    &.disabled.active, &[disabled].active
+      background-color: rgba($col-primary, 0.5)
+      color: rgba($col-primary-contrast, 0.8)
+
+  fieldset[disabled] .btn--primary,
+  fieldset[disabled] .btn--primary:hover,
+  fieldset[disabled] .btn--primary:focus,
+  fieldset[disabled] .btn--primary.focus,
+  fieldset[disabled] .btn--primary:active,
+  fieldset[disabled] .btn--primary.active
+    background-color: rgba($col-primary, 0.5)
+    color: rgba($col-primary-contrast, 0.8)
+
+
+  .btn--success
+    color: #fff
+    background-color: $col-success
+    .badge
+      color: $col-success
+      background-color: #fff
+    &:hover, &:focus, &.focus, &:active, &.active
+      color: #fff
+      background-color: darken($col-success,15%)
+
+  .open > .dropdown__toggle.btn--success
+    color: #fff
+    background-color: darken($col-success,15%)
+
+  .btn--success
+    &.disabled, &[disabled],
+    &.disabled:hover, &[disabled]:hover,
+    &.disabled:focus, &[disabled]:focus,
+    &.disabled.focus, &[disabled].focus,
+    &.disabled:active, &[disabled]:active,
+    &.disabled.active, &[disabled].active
+      background-color: rgba($col-success, 0.5)
+      color: rgba(255, 255, 255, 0.8)
+
+  fieldset[disabled] .btn--success,
+  fieldset[disabled] .btn--success:hover,
+  fieldset[disabled] .btn--success:focus,
+  fieldset[disabled] .btn--success.focus,
+  fieldset[disabled] .btn--success:active,
+  fieldset[disabled] .btn--success.active
+    background-color: rgba($col-success, 0.5)
+    color: rgba(255, 255, 255, 0.8)
+
+
+  .btn--info
+    color: #fff
+    background-color: $col-info
+    .badge
+      color: $col-info
+      background: #fff
+    &:hover, &:focus, &.focus, &:active, &.active
+      color: #fff
+      background-color: darken($col-info, 15%)
+
+  .open > .dropdown__toggle.btn--info
+    color: #fff
+    background-color: darken($col-info, 15%)
+
+  .btn--info
+    &.disabled, &[disabled]
+      background-color: rgba($col-info, 0.5)
+      color: rgba(255, 255, 255, 0.8)
+
+  fieldset[disabled] .btn--info
+    background-color: rgba($col-info, 0.5)
+    color: rgba(255, 255, 255, 0.8)
+
+  .btn--info
+    &.disabled, &[disabled],
+    &.disabled:hover, &[disabled]:hover,
+    &.disabled:focus, &[disabled]:focus,
+    &.disabled.focus, &[disabled].focus,
+    &.disabled:active, &[disabled]:active,
+    &.disabled.active, &[disabled].active
+      background-color: rgba($col-info, 0.5)
+      color: rgba(255, 255, 255, 0.8)
+
+  fieldset[disabled] .btn--info:hover,
+  fieldset[disabled] .btn--info:focus,
+  fieldset[disabled] .btn--info.focus,
+  fieldset[disabled] .btn--info:active,
+  fieldset[disabled] .btn--info.active
+    background-color: rgba($col-info, 0.5)
+    color: rgba(255, 255, 255, 0.8)
+
+
+  .btn--warning
+    color: #fff
+    background-color: $col-warning
+    .badge
+      color: darken($col-warning, 15%)
+      background-color: #fff
+    &:hover, &:focus, &.focus, &:active, &.active
+      color: #fff
+      background-color: darken($col-warning, 15%)
+
+  .open > .dropdown__toggle.btn--warning
+    color: #fff
+    background-color: darken($col-warning, 15%)
+
+  .btn--warning
+    &.disabled, &[disabled],
+    &.disabled:hover, &[disabled]:hover,
+    &.disabled:focus, &[disabled]:focus,
+    &.disabled.focus, &[disabled].focus,
+    &.disabled:active, &[disabled]:active,
+    &.disabled.active, &[disabled].active
+      background-color: rgba($col-warning, 0.5)
+      color: rgba(255, 255, 255, 0.8)
+
+  fieldset[disabled] .btn--warning,
+  fieldset[disabled] .btn--warning:hover,
+  fieldset[disabled] .btn--warning:focus,
+  fieldset[disabled] .btn--warning.focus,
+  fieldset[disabled] .btn--warning:active,
+  fieldset[disabled] .btn--warning.active
+    background-color: rgba($col-warning, 0.5)
+    color: rgba(255, 255, 255, 0.8)
+
+  .btn--danger
+    color: #fff
+    background-color: $col-danger
+    .badge
+      color: $col-danger
+      background-color: #fff
+    &:hover, &:focus, &.focus, &:active, &.active
+      color: #fff
+      background-color: darken($col-danger, 15%)
+
+  .open > .dropdown__toggle.btn--danger
+    color: #fff
+    background-color: darken($col-danger, 15%)
+
+  .btn--danger
+    &.disabled, &[disabled],
+    &.disabled:hover, &[disabled]:hover,
+    &.disabled:focus, &[disabled]:focus,
+    &.disabled.focus, &[disabled].focus,
+    &.disabled:active, &[disabled]:active,
+    &.disabled.active, &[disabled].active
+      background-color: rgba($col-danger, 0.5)
+      color: rgba(255, 255, 255, 0.8)
+
+  fieldset[disabled] .btn--danger,
+  fieldset[disabled] .btn--danger:hover,
+  fieldset[disabled] .btn--danger:focus,
+  fieldset[disabled] .btn--danger.focus,
+  fieldset[disabled] .btn--danger:active,
+  fieldset[disabled] .btn--danger.active
+    background-color: rgba($col-danger, 0.5)
+    color: rgba(255, 255, 255, 0.8)
+
+  .btn--link
+    font-weight: normal
+    color: $col-primary
+    padding-left: 0 !important
+    border-radius: 0
+    border-color: transparent
+    background-color: transparent
+    -webkit-box-shadow: none
+    box-shadow: none
+    .badge
+      color: $col-primary-contrast
+      background-color: $col-primary
+    &:hover, &:focus, &:active
+      border-color: transparent
+    &:hover, &:focus
+      color: $col-tertiary
+      text-decoration: underline
+      background-color: transparent
+      .badge
+        background: $col-tertiary
+        color: $col-tertiary-contrast
+    &:active, &.active, &[disabled],
+    &.disabled, &[disabled],
+    &.disabled:hover, &[disabled]:hover,
+    &.disabled:focus, &[disabled]:focus,
+    &.disabled.focus, &[disabled].focus,
+    &.disabled:active, &[disabled]:active,
+    &.disabled.active, &[disabled].active
+      background-color: transparent
+      -webkit-box-shadow: none
+      box-shadow: none
+      color: #777
+      text-decoration: none
+    &:first-child
+      padding-left: 0
+
+  fieldset[disabled] .btn--link,
+  fieldset[disabled] .btn--link:hover,
+  fieldset[disabled] .btn--link:focus,
+  fieldset[disabled] .btn--link.focus,
+  fieldset[disabled] .btn--link:active,
+  fieldset[disabled] .btn--link.active
+    background-color: transparent
+    -webkit-box-shadow: none
+    box-shadow: none
+    color: #777
+    text-decoration: none
+
+  .btn--xl, .btn__group--xl > .btn
+    padding: 0.875em 1.4em
+    font-size: 28.8px
+    line-height: 1.4
+    border-radius: 8px
+    border-bottom-width: 5px
+    &:active
+      padding: 0.75em 1.4em 1em 1.4em
+      -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25)
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25)
+    .badge
+      font-size: 0.9em
+      min-width: 32px
+
+  .btn--lg, .btn__group--lg > .btn
+    padding: 0.417em 1em
+    font-size: 24px
+    line-height: 1.4
+    border-radius: 4px
+    border-bottom-width: 3px
+    &:active
+      padding: 0.317em 1em 0.517em 1em
+      -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25)
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25)
+    .badge
+      font-size: 0.6em
+      top: -3px
+
+  .btn--sm, .btn__group--sm > .btn
+    padding: 0.45em 0.875em
+    font-size: 12.8px
+    line-height: 1.5
+    &:active
+      padding: 0.35em 0.875em 0.55em 0.875em
+    .badge
+      top: 0
+      min-width: auto
+      padding: 2px 5px
+
+  .btn--xs, .btn__group--xs > .btn
+    padding: 0.2em 0.5em
+    font-size: 12px
+    line-height: 1.5
+    border-bottom-width: 1px
+    border-radius: 2px
+    &:active
+      padding: 0.15em 0.5em 0.25em 0.5em
+    .badge
+      top: 0
+      min-width: auto
+      padding: 1px 5px
+
+  .btn--sm > i, .btn--xs > i  
+    font-size: 130%
+
+  .btn--block
+    display: block
+    width: 100%
+    + .btn--block
+      margin-top: 5px
+
+  input
+    &[type="submit"].btn--block, &[type="reset"].btn--block, &[type="button"].btn--block
+      width: 100%
+
+  .btn--round
+    border-radius: 5em
+
+
+  /* BUTTON GROUPS ================ */
+
+  .btn__group, .btn__group--vertical
+    position: relative
+    display: inline-block
+    vertical-align: middle
+
+  .btn__group > .btn, .btn__group--vertical > .btn
+    position: relative
+    float: left
+
+  .btn__group > .btn:hover, .btn__group--vertical > .btn:hover, .btn__group > .btn:focus, .btn__group--vertical > .btn:focus, .btn__group > .btn:active, .btn__group--vertical > .btn:active, .btn__group > .btn.active, .btn__group--vertical > .btn.active
+    z-index: 2
+
+  .btn__group
+    .btn +
+      .btn, .btn__group
+        margin-left: -1px
+    .btn__group +
+      .btn, .btn__group
+        margin-left: -1px
+
+  .btn__group
+    >
+      .btn
+        border-left: 1px solid rgba(0,0,0,0.15)
+        &:not(:first-child):not(:last-child):not(.dropdown__toggle)
+          border-radius: 0
+        &:first-child
+          margin-left: 0
+          border-left: none
+          &:not(:last-child):not(.dropdown__toggle)
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+        &:last-child:not(:first-child)
+          border-top-left-radius: 0
+          border-bottom-left-radius: 0
+      .dropdown__toggle:not(:first-child)
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+      .btn__group
+        > .btn
+          border-left: 1px solid rgba(0,0,0,0.15)
+        &:first-child > .btn
+          border-left: none
+        float: left
+        &:not(:first-child):not(:last-child) > .btn
+          border-radius: 0
+        &:first-child:not(:last-child) >
+          .btn:last-child, .dropdown__toggle
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+        &:last-child:not(:first-child) > .btn:first-child
+          border-top-left-radius: 0
+          border-bottom-left-radius: 0
+    .dropdown__toggle:active
+      outline: 0
+    &.open .dropdown__toggle
+      outline: 0
+      //-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+      //box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+      &.btn--link
+        -webkit-box-shadow: none
+        box-shadow: none
+    >
+      .btn + .dropdown__toggle
+        padding-right: 0.875em
+        padding-left: 0.875em
+        border-left: 1px solid rgba(0,0,0,0.2)
+      .btn--lg + .dropdown__toggle
+        padding-right: 1.25em
+        padding-left: 1.25em
+
+  .btn .caret
+    margin-left: 0
+
+  .btn--lg .caret
+    border-width: 5px 5px 0
+    border-bottom-width: 0
+
+  .dropdown--up .btn--lg .caret
+    border-width: 0 5px 5px
+
+  .btn__group--vertical >
+    .btn
+      display: block
+      float: none
+      width: 100%
+      max-width: 100%
+    .btn__group
+      display: block
+      float: none
+      width: 100%
+      max-width: 100%
+      > .btn
+        display: block
+        float: none
+        width: 100%
+        max-width: 100%
+        float: none
+    .btn +
+      .btn, .btn__group
+        margin-top: -1px
+        margin-left: 0
+    .btn__group +
+      .btn, .btn__group
+        margin-top: -1px
+        margin-left: 0
+    .btn
+      &:not(:first-child):not(:last-child)
+        border-radius: 0
+      &:first-child:not(:last-child)
+        border-top-right-radius: 4px
+        border-bottom-right-radius: 0
+        border-bottom-left-radius: 0
+      &:last-child:not(:first-child)
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+        border-bottom-left-radius: 4px
+    .btn__group
+      &:not(:first-child):not(:last-child) > .btn
+        border-radius: 0
+      &:first-child:not(:last-child) >
+        .btn:last-child, .dropdown__toggle
+          border-bottom-right-radius: 0
+          border-bottom-left-radius: 0
+      &:last-child:not(:first-child) > .btn:first-child
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+
+  .btn__group--justified
+    display: table
+    width: 100%
+    table-layout: fixed
+    border-collapse: separate
+    >
+      .btn
+        display: table-cell
+        float: none
+        width: 1%
+      .btn__group
+        display: table-cell
+        float: none
+        width: 1%
+        .btn
+          width: 100%
+        .dropdown__menu
+          left: auto
+
+  [data-toggle="buttons"] >
+    .btn input[type="radio"], .btn__group > .btn input[type="radio"], .btn input[type="checkbox"], .btn__group > .btn input[type="checkbox"]
+      position: absolute
+      clip: rect(0, 0, 0, 0)
+      pointer-events: none
+
+  @media (min-width: 768px) and (max-width: 991px)
+    .btn__group
+      margin-bottom: 1em
+
+
+ 
+  /* FORMS =============== */
+
+  .form__control
+    display: block
+    width: 100%
+    height: 34px
+    padding: 6px 8px
+    font-size: 14px
+    line-height: 1.42857143
+    margin-bottom: 1px
+    color: $col-boxes-text
+    background-color: $col-boxes
+    background-image: none
+    border: 1px solid rgba($col-borders,0.8)
+    border-radius: 4px
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+    &:focus
+      border-color: rgba($col-tertiary, 1)
+      outline: 0
+      background: tint($col-tertiary, 75%)
+      color: $col-tertiary
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12), 0 0 8px rgba($col-tertiary, 0.4)
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12), 0 0 8px rgba($col-tertiary, 0.4)
+      &::-webkit-input-placeholder
+        color: rgba($col-tertiary,0.5)
+      &::-moz-placeholder
+        color: rgba($col-tertiary,0.5)
+      &:-ms-input-placeholder
+        color: rgba($col-tertiary,0.5)
+      &:-moz-placeholder
+        color: rgba($col-tertiary,0.5)
+    &::-webkit-input-placeholder
+      color: rgba($col-boxes-text,0.5)
+    &::-moz-placeholder
+      color: rgba($col-boxes-text,0.5)
+    &:-ms-input-placeholder
+      color: rgba($col-boxes-text,0.5)
+    &:-moz-placeholder
+      color: rgba($col-boxes-text,0.5)
+    &[disabled], &[readonly]
+      background-color: rgba($col-boxes-text,0.1)
+      color: rgba($col-boxes-text,0.5)
+      opacity: 1
+
+  .table .form__control
+    margin-bottom: 0
+
+  fieldset[disabled] .form__control
+    background-color: rgba($col-boxes-text,0.1)
+      color: rgba($col-boxes-text,0.6)
+      opacity: 1
+
+  .form__control[disabled], fieldset[disabled] .form__control
+    cursor: not-allowed
+
+  textarea.form__control
+    height: auto
+    resize: vertical
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0)
+    input
+      &[type="date"], &[type="time"], &[type="datetime-local"], &[type="month"]
+        //line-height: 34px
+      &[type="date"].form__control--sm, &[type="time"].form__control--sm, &[type="datetime-local"].form__control--sm, &[type="month"].form__control--sm
+        //line-height: 30px
+    .form__inputgroup--sm input
+      &[type="date"], &[type="time"], &[type="datetime-local"], &[type="month"]
+        //line-height: 30px
+    input
+      &[type="date"].form__control--lg, &[type="time"].form__control--lg, &[type="datetime-local"].form__control--lg, &[type="month"].form__control--lg
+        //line-height: 46px
+    .form__inputgroup--lg input
+      &[type="date"], &[type="time"], &[type="datetime-local"], &[type="month"]
+        //line-height: 46px
+
+  .form__group
+    margin-bottom: 1em
+
+  .form__group--no-input
+    padding-top: 0.875em
+
+  .form__group__radio, .form__group__checkbox
+    position: relative
+    display: block
+    margin-top: 0.625em
+    margin-bottom: 0.625em
+
+  .form__group__radio label, .form__group__checkbox label
+    min-height: 20px
+    padding-left: 15px
+    margin-bottom: 0
+    font-weight: normal
+    cursor: pointer
+
+  .form__group__radio input[type="radio"], .form__label--inline input[type="radio"], .form__group__checkbox input[type="checkbox"], .form__label--inline input[type="checkbox"]
+    position: absolute
+    margin-top: 4px \9
+    margin-left: -20px
+
+  .form__group__radio + .form__group__radio, .form__group__checkbox + .form__group__checkbox
+    margin-top: -5px
+
+  .form__label--inline 
+    position: relative
+    display: inline-block
+    padding-left: 20px
+    margin-bottom: 0
+    font-weight: normal
+    vertical-align: middle
+    cursor: pointer
+    + .form__label--inline 
+      margin-top: 0
+      margin-left: 20px
+
+  fieldset[disabled] input
+    &[type="radio"], &[type="checkbox"]
+      cursor: not-allowed
+
+  .form__label--inline.disabled, 
+  .form__group__radio.disabled label, 
+  .form__group__checkbox.disabled label
+    cursor: not-allowed
+
+  fieldset[disabled]
+    .form__label--inline, .form__group__radio label, .form__group__checkbox label
+      cursor: not-allowed
+
+  .form__control--range, .form__control--rangeinput
+    display: inline
+    margin-bottom: 5px
+  .form__control--range, input.form__control--range[type="range"]
+    width: 82.5%
+    margin-right: 2.5%
+    margin-left: 0
+    padding: 0
+    float: left
+    border: none
+    box-shadow: none
+    background: transparent
+  .form__control--rangeinput
+    width: 15%
+    margin-left: 0
+    margin-right: 0
+
+  .form__control--static
+    font-size: 14px
+    min-height: 34px
+    padding-top: 6px
+    padding-bottom: 6px
+    margin-bottom: 0
+    &.form__control--lg, &.form__control--sm
+      padding-right: 0
+      padding-left: 0
+
+  .form__control--sm
+    height: 28px
+    padding: 5px 10px
+    font-size: 12px
+    line-height: 1.5
+    border-radius: 3px
+
+  select.form__control--sm,
+  select.form__group--sm .form__control
+    height: 28px
+    line-height: 28px
+
+  textarea.form__control--sm, 
+  select[multiple].form__control--sm,
+  textarea.form__group--sm .form__control, 
+  select[multiple].form__group--sm .form__control
+    height: auto
+
+  .form__group--sm .form__control
+    height: 28px
+    padding: 5px 10px
+    font-size: 12px
+    line-height: 1.5
+    border-radius: 3px
+
+  .form__group--sm .form__control--static
+    height: 28px
+    min-height: 28px
+    padding: 5px 10px
+    font-size: 12px
+    line-height: 1.5
+
+  .form__control--lg
+    height: 46px
+    padding: 10px 16px
+    font-size: 18px
+    line-height: 1.3333333
+    border-radius: 6px
+
+  select.form__control--lg
+    height: 46px
+    line-height: 46px
+
+  textarea.form__control--lg, select[multiple].form__control--lg
+    height: auto
+
+  .form__group--lg .form__control
+    height: 46px
+    padding: 10px 16px
+    font-size: 18px
+    line-height: 1.3333333
+    border-radius: 6px
+
+  select.form__group--lg .form__control
+    height: 46px
+    line-height: 46px
+
+  textarea.form__group--lg .form__control, select[multiple].form__group--lg .form__control
+    height: auto
+
+  .form__group--lg .form__control--static
+    height: 46px
+    min-height: 38px
+    padding: 10px 16px
+    font-size: 18px
+    line-height: 1.3333333
+
+  .has--feedback
+    position: relative
+    .form__control
+      padding-right: 42.5px
+
+  .form__control__feedback
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 2
+    display: block
+    width: 34px
+    height: 34px
+    line-height: 34px
+    text-align: center
+    pointer-events: none
+
+  .form__control--lg + .form__control__feedback
+    width: 46px
+    height: 46px
+    line-height: 46px
+
+  .form__control--sm + .form__control__feedback
+    width: 30px
+    height: 30px
+    line-height: 30px
+
+  .has--success
+    .form__help, .form__label, .form__group__radio, .form__group__checkbox, .form__label--inline, &.form__group__radio label, &.form__group__checkbox label, &.form__label--inline label
+      color: $col-success
+    .form__control
+      border-color: lighten($col-success, 15%)
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      &:focus
+        border-color: lighten($col-success, 25%)
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lighten($col-success, 25%)
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lighten($col-success, 25%)
+    .form__inputgroup__addon
+      color: lighten($col-success, 15%)
+      background-color: rgba($col-success,0.06)
+      border-color: lighten($col-success, 15%)
+    .form__control__feedback
+      color: $col-success
+
+  .has--warning
+    .form__help, .form__label, .form__group__radio, .form__group__checkbox, .form__label--inline, &.form__group__radio label, &.form__group__checkbox label, &.form__label--inline label
+      color: $col-warning
+    .form__control
+      border-color: lighten($col-warning, 15%)
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      &:focus
+        border-color: lighten($col-warning, 25%)
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lighten($col-warning, 25%)
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lighten($col-warning, 25%)
+    .form__inputgroup__addon
+      color: lighten($col-warning, 15%)
+      background-color: tint($col-warning,93%)
+      border-color: lighten($col-warning, 15%)
+    .form__control__feedback
+      color: $col-warning
+
+  .has--error
+    .form__help, .form__label, .form__group__radio, .form__group__checkbox, .form__label--inline, &.form__group__radio label, &.form__group__checkbox label, &.form__label--inline label
+      color: $col-danger
+    .form__control
+      border-color: lighten($col-danger, 15%)
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      &:focus
+        border-color: lighten($col-danger, 25%)
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lighten($col-danger, 25%)
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lighten($col-danger, 25%)
+    .form__inputgroup__addon
+      color: lighten($col-danger, 15%)
+      background-color: rgba($col-danger, 0.06)
+      border-color: lighten($col-danger, 15%)
+    .form__control__feedback
+      color: $col-danger
+
+  .has--feedback label
+    ~ .form__control__feedback
+      top: 25px
+    &.sr-only ~ .form__control__feedback
+      top: 0
+
+  .form__help
+    display: block
+    margin-top: 0.25em
+    margin-bottom: 0.25em
+    color: rgba($col-text,0.6)
+    font-size: 0.875em
+
+  @media (min-width: 768px)
+    .form--inline
+      .form__group
+        display: inline-block
+        margin-bottom: 0
+        vertical-align: middle
+      .form__control
+        display: inline-block
+        width: auto
+        vertical-align: middle
+      .form__control--static
+        display: inline-block
+      .form__inputgroup
+        display: inline-table
+        vertical-align: middle
+        .form__inputgroup__addon, .form__inputgroup__btn, .form__control
+          width: auto
+        > .form__control
+          width: 100%
+      .form__label
+        margin-bottom: 0
+        vertical-align: middle
+      .form__group__radio, .form__group__checkbox
+        display: inline-block
+        margin-top: 0
+        margin-bottom: 0
+        vertical-align: middle
+      .form__group__radio label, .form__group__checkbox label
+        padding-left: 0
+      .form__group__radio input[type="radio"], .form__group__checkbox input[type="checkbox"]
+        position: relative
+        margin-left: 0
+      .has--feedback .form__control__feedback
+        top: 0
+
+  .form--horizontal
+    .form__group__radio, .form__group__checkbox, .form__label--inline
+      padding-top: 5px
+      margin-top: 0
+      margin-bottom: 0
+    .form__group__radio, .form__group__checkbox
+      min-height: 27px
+    .form__group
+      margin-right: -15px
+      margin-left: -15px
+    .has--feedback .form__control__feedback
+      right: 15px
+
+  @media (min-width: 768px)
+    .form--horizontal .form__label
+      padding-top: 7px
+      margin-bottom: 0
+      text-align: left
+
+  @media (min-width: 768px)
+    .form--horizontal .form__group--lg .form__label
+      padding-top: 14.333333px
+
+  @media (min-width: 768px)
+    .form--horizontal .form__group--sm .form__label
+      padding-top: 6px
+
+  /* INPUT GROUP =============== */
+
+  .form__inputgroup
+    position: relative
+    display: table
+    border-collapse: separate
+    &[class*="grid__col--"]
+      float: none
+      padding-right: 0
+      padding-left: 0
+    .form__control
+      position: relative
+      z-index: 2
+      float: left
+      width: 100%
+      margin-bottom: 0
+
+  .form__inputgroup--lg >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: 46px
+      padding: 10px 16px
+      font-size: 18px
+      line-height: 1.3333333
+      border-radius: 6px
+
+  select.form__inputgroup--lg >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: 46px
+      line-height: 46px
+
+  textarea.form__inputgroup--lg >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: auto
+
+  select[multiple].form__inputgroup--lg >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: auto
+
+  .form__inputgroup--sm >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: 30px
+      padding: 5px 10px
+      font-size: 12px
+      line-height: 1.5
+      border-radius: 3px
+
+  select.form__inputgroup--sm >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: 30px
+      line-height: 30px
+
+  textarea.form__inputgroup--sm >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: auto
+
+  select[multiple].form__inputgroup--sm >
+    .form__control, .form__inputgroup__addon, .form__inputgroup__btn > .btn
+      height: auto
+
+  .form__inputgroup__addon, .form__inputgroup__btn, .form__inputgroup .form__control
+    display: table-cell
+
+  .form__inputgroup__addon:not(:first-child):not(:last-child), .form__inputgroup__btn:not(:first-child):not(:last-child), .form__inputgroup .form__control:not(:first-child):not(:last-child)
+    border-radius: 0
+
+  .form__inputgroup__addon, .form__inputgroup__btn
+    width: 1%
+    white-space: nowrap
+    vertical-align: middle
+
+  .form__inputgroup__addon
+    padding: 6px 12px
+    font-size: 14px
+    font-weight: normal
+    line-height: 1
+    color: $col-boxes-text
+    text-align: center
+    background-color: rgba($col-boxes-text,0.1)
+    border: 1px solid $col-borders
+    border-radius: 4px
+    &.form__control--sm
+      padding: 5px 10px
+      font-size: 12px
+      border-radius: 3px
+    &.form__control--lg
+      padding: 10px 16px
+      font-size: 18px
+      border-radius: 6px
+    input
+      &[type="radio"], &[type="checkbox"]
+        margin-top: 0
+
+  .form__inputgroup .form__control:first-child, .form__inputgroup__addon:first-child
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+  .form__inputgroup__btn
+    &:first-child >
+      .btn, .btn__group > .btn, .dropdown__toggle
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+    &:last-child >
+      .btn:not(:last-child):not(.dropdown__toggle), .btn__group:not(:last-child) > .btn
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+
+  .form__inputgroup__addon:first-child
+    border-right: 0
+
+  .form__inputgroup .form__control:last-child, .form__inputgroup__addon:last-child
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+  .form__inputgroup__btn
+    &:last-child >
+      .btn, .btn__group > .btn, .dropdown__toggle
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+    &:first-child >
+      .btn:not(:first-child), .btn__group:not(:first-child) > .btn
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+
+  .form__inputgroup__addon:last-child
+    border-left: 0
+
+  .form__inputgroup__btn
+    position: relative
+    font-size: 0
+    white-space: nowrap
+    > .btn
+      position: relative
+      + .btn
+        margin-left: -1px
+      &:hover, &:focus, &:active
+        z-index: 2
+    &:first-child >
+      .btn, .btn__group
+        margin-right: -1px
+    &:last-child >
+      .btn, .btn__group
+        margin-left: -1px
+
+
+  /* TOGGLE BUTTONS =============== */
+  
+  .toggle__input
+    display: none 
+    // add default box-sizing for this scope
+    *, *:after, *:before,
+    + .toggle__label--btn, + .toggle__label--dot, + .toggle__label--box
+      box-sizing: border-box
+      &::selection
+        background: none
+    + .toggle__label--btn
+      outline: 0
+      display: inline-block
+      width: 4em
+      height: 2.1em
+      margin: 0 0 3px 0
+      position: relative
+      cursor: pointer
+      user-select: none
+      background: $col-borders
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.15)
+      border-radius: 2em
+      padding: 2px !important
+      transition: all .4s ease
+      &:after, &:before
+        position: relative
+        display: block
+        content: ""
+        width: 50%
+        height: 100%
+        border-radius: 50%
+        background: #fff
+        transition: all .2s ease
+        box-shadow: 0 1px 2px rgba(0,0,0,0.3)
+      &:after
+        left: 0
+      &:before
+        display: none
+    &:checked
+      + .toggle__label--btn
+        background: $col-success
+        &:after
+          left: 50%
+    &:disabled
+      + .toggle__label--btn
+        opacity: 0.4 !important
+        &:after, &:before
+          background: rgba(255,255,255,0.6)
+      + .toggle__label--dot
+        opacity: 0.4 !important
+      + .toggle__label--box
+        opacity: 0.4 !important
+    + .toggle__label--dot
+      outline: 0
+      display: inline-block
+      width: 2em
+      height: 2em
+      margin: 0 0 3px 0
+      position: relative
+      cursor: pointer
+      user-select: none
+      background: $col-boxes
+      border: 3px solid $col-borders
+      border-radius: 2em
+      padding: 3px
+      transition: all .4s ease
+      &:after, &:before
+        position: relative
+        display: block
+        content: ""
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        background: $col-boxes
+        transition: all .2s ease
+      &:after
+        margin: 0 auto
+      &:before
+        display: none
+    &:checked
+      + .toggle__label--dot
+        border-color: $col-success
+        &:after
+          background: $col-success
+    + .toggle__label--box
+      outline: 0
+      display: inline-block
+      width: 2em
+      height: 2em
+      margin: 0 0 3px 0
+      position: relative
+      cursor: pointer
+      user-select: none
+      background: $col-boxes
+      border: 3px solid $col-borders
+      padding: 3px
+      transition: all .4s ease
+      &:after, &:before
+        position: relative
+        display: block
+        content: ""
+        width: 100%
+        height: 100%
+        background: $col-boxes
+        transition: all .2s ease
+        font-family: "FontAwesome"
+        content: "\f00c"
+        text-align: center
+        color: $col-boxes
+        font-size: 1.2em
+        line-height: 1
+        float: left
+      &:after
+        margin: 0 auto
+      &:before
+        display: none
+    &:checked
+      + .toggle__label--box
+        border-color: $col-success
+        &:after
+          color: $col-success
+
+  .toggle__label--text
+    vertical-align: top
+    line-height: 2
+
+  .table .toggle__label--btn, .table .toggle__label--dot, .table .toggle__label--box
+    margin-bottom: 0
+
+  .form--inline .toggle__label--btn, .form--inline .toggle__label--dot, .form--inline .toggle__label--box 
+    margin-top: 2px
+
+  .form__group--sm
+    .toggle__input
+      + .toggle__label--btn
+        width: 3.715em
+        height: 2em
+      + .toggle__label--dot
+        width: 2em
+        height: 2em
+        padding: 4px
+      + .toggle__label--box
+        width: 2em
+        height: 2em
+        padding: 4px 0
+        &:after
+          font-size: 1.2em
+  .form__group--lg
+    .toggle__input        
+      + .toggle__label--btn
+        width: 6.2865em
+        height: 3.2865em
+      + .toggle__label--dot
+        width: 3.2865em
+        height: 3.2865em
+        padding: 0.5em
+      + .toggle__label--box
+        width: 3.2865em
+        height: 3.2865em
+        padding: 0.25em
+        &:after
+          font-size: 2.4em
+    .toggle__label--text
+      line-height: 3em
+
+  .has--success
+    .toggle__input
+      + .toggle__label--box
+        background-color: rgba($col-success,0.2)
+        border-color: $col-success
+        &:after, &:before
+          background: transparent
+        &:after
+          color: transparent
+          background: transparent
+      + .toggle__label--btn
+        background-color: rgba($col-success,0.2)
+        border-color: $col-success
+        &:after, &:before
+          background: white
+      + .toggle__label--dot
+        background-color: rgba($col-success,0.2)
+        border-color: $col-success
+        &:after, &:before
+          background: transparent
+        &:after
+          color: transparent
+          background: transparent
+      &:checked
+        + .toggle__label--box
+          background-color: $col-success
+          border-color: $col-success
+          &:after, &:before
+            background: $col-success
+          &:after
+            color: white
+        + .toggle__label--dot
+          border-color: $col-success
+          &:after, &:before
+            background: $col-success
+          &:after
+            color: $col-boxes
+        + .toggle__label--btn
+          background-color: darken($col-success,10%)
+          border-color: $col-success
+          &:after, &:before
+            background: $col-success
+  .has--warning
+    .toggle__input
+      + .toggle__label--box
+        border-color: rgba($col-warning,0.4)
+        &:after, &:before
+          content: "\f12a"
+          background: transparent
+        &:after
+          color: transparent
+          background: transparent
+      + .toggle__label--btn
+        background-color: rgba($col-warning,0.2)
+        border-color: rgba($col-warning,0.4)
+        &:after, &:before
+          background: white
+          color: $col-warning
+      + .toggle__label--dot
+        border-color: rgba($col-warning,0.4)
+        &:after, &:before
+          background: transparent
+        &:after
+          background: transparent
+      &:checked
+        + .toggle__label--box
+          border-color: $col-warning
+          &:after
+            color: $col-warning
+        + .toggle__label--dot
+          border-color: $col-warning
+          &:after
+            background: $col-warning
+        + .toggle__label--btn
+          background-color: $col-warning
+          border-color: $col-warning
+          &:after, &:before
+            background: $col-boxes
+  .has--error
+    .toggle__input
+      + .toggle__label--box
+        border-color: rgba($col-danger,0.4)
+        &:after, &:before
+          content: "\f00d"
+          background: transparent
+        &:after
+          color: transparent
+          background: transparent
+      + .toggle__label--btn
+        background-color: rgba($col-danger,0.2)
+        border-color: rgba($col-danger,0.4)
+        &:after, &:before
+          background: white
+          color: $col-danger
+      + .toggle__label--dot
+        border-color: rgba($col-danger,0.4)
+        &:after, &:before
+          background: transparent
+        &:after
+          background: transparent
+      &:checked
+        + .toggle__label--box
+          border-color: $col-danger
+          &:after
+            color: $col-danger
+        + .toggle__label--dot
+          border-color: $col-danger
+          &:after
+            background: $col-danger
+        + .toggle__label--btn
+          background-color: $col-danger
+          border-color: $col-danger
+          &:after, &:before
+            background: $col-boxes
+
+  /* WELLS ====================== */
+
+  .well
+    min-height: 1em
+    padding: 1em
+    margin-bottom: 1em
+    color: $col-boxes-text
+    background-color: $col-boxes
+    border: 1px solid $col-borders
+    border-bottom-width: 2px
+    border-radius: 3px
+    -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.125)
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.125)
+    > *:last-child:not(.btn)
+      margin-bottom: 0 !important
+
+  .well--grey
+    background: #f5f5f5
+    color: #404040
+
+  .well--lg
+    padding: 2em
+    border-radius: 4px
+    border-bottom-width: 3px
+
+  .well--sm
+    padding: 0.5em
+    border-radius: 2px
+
+  /* BADGES? We don't need no stinkin' badges! =============== */
+
+  .badge
+    display: inline-block
+    margin-left: 7px
+    min-width: 10px
+    padding: 3px 6px 3px 6px
+    font-size: 0.875em
+    font-weight: bold
+    line-height: 1
+    color: $col-boxes
+    text-align: center
+    white-space: nowrap
+    vertical-align: baseline
+    background-color: $col-boxes-text
+    border-radius: 5em
+    &:empty
+      display: none
+    &:hover, &:focus
+      color: $col-tertiary
+      background: $col-tertiary-contrast
+      text-decoration: none
+      cursor: pointer
+
+  .listgroup__item.active > .badge, 
+  .nav--pills > .active > a > .badge,
+  .nav--tabs > .active > a > .badge
+    color: $col-primary
+    background-color: $col-primary-contrast
+
+  .listgroup__item > .badge
+    float: right
+    + .badge
+      margin-right: 5px
+
+  .nav--pills > li > a > .badge
+    margin-left: 3px
+
+
+  /* BREADCRUMB =============== */
+
+  .breadcrumb
+    padding: 0.375em 0.75em
+    margin-bottom: 1em
+    list-style: none
+    background-color: $col-boxes
+    color: $col-boxes-text
+    border-radius: 3px
+    border-bottom: 2px solid $col-borders
+    >
+      li
+        display: inline-block
+        + li:before
+          padding: 0 0.3em
+          color: rgba($col-boxes-text,0.4)
+          font-family: "FontAwesome"
+          content: "\f105"
+      .active
+        color: rgba($col-boxes-text,0.8)
+
+  /* PAGINATION =============== */ 
+
+  .pagination
+    display: inline-block
+    padding-left: 0
+    margin-bottom: 20px
+    border-radius: 3px
+    >
+      li
+        display: inline
+        >
+          a, span
+            position: relative
+            float: left
+            padding: 0.375em 0.75em
+            margin-left: -1px
+            line-height: 1.42857143
+            color: $col-primary
+            text-decoration: none
+            background-color: $col-primary-contrast
+            border: 1px solid rgba($col-borders,0.5)
+            border-bottom-width: 2px
+        &:first-child >
+          a, span
+            margin-left: 0
+            border-top-left-radius: 4px
+            border-bottom-left-radius: 4px
+        &:last-child >
+          a, span
+            border-top-right-radius: 4px
+            border-bottom-right-radius: 4px
+        >
+          a:hover, span:hover, a:focus, span:focus
+            color: $col-tertiary-contrast
+            background-color: $col-tertiary
+            border-color: $col-borders
+      .active >
+        a, span, a:hover, span:hover, a:focus, span:focus
+          z-index: 2
+          color: $col-primary-contrast
+          cursor: default
+          background-color: $col-primary
+          border-color: $col-primary
+      .disabled >
+        span
+          color: rgba($col-boxes-text,0.5)
+          cursor: not-allowed
+          background-color: $col-boxes
+          border-color: $col-borders
+          &:hover, &:focus
+            color: rgba($col-boxes-text,0.5)
+            cursor: not-allowed
+            background-color: $col-boxes
+            border-color: $col-borders
+        a
+          color: rgba($col-boxes-text,0.5)
+          cursor: not-allowed
+          background-color: $col-boxes
+          border-color: $col-borders
+          &:hover, &:focus
+            color: rgba($col-boxes-text,0.5)
+            cursor: not-allowed
+            background-color: $col-boxes
+            border-color: $col-borders
+
+  .pagination--lg > li
+    >
+      a, span
+        padding: 0.5em 1em
+        font-size: 1.125em
+    &:first-child >
+      a, span
+        border-top-left-radius: 6px
+        border-bottom-left-radius: 6px
+    &:last-child >
+      a, span
+        border-top-right-radius: 6px
+        border-bottom-right-radius: 6px
+
+  .pagination--sm > li
+    >
+      a, span
+        padding: 0.25em 0.5em
+        font-size: 12px
+    &:first-child >
+      a, span
+        border-top-left-radius: 3px
+        border-bottom-left-radius: 3px
+    &:last-child >
+      a, span
+        border-top-right-radius: 3px
+        border-bottom-right-radius: 3px
+
+  /* BLOCKQUOTE ====================== */
+
+  .blockquote--reverse,
+  blockquote.pull--right 
+    padding-right: 15px
+    padding-left: 0
+    border-right: 5px solid $col-borders
+    border-left: 0
+    text-align: right
+
+  .blockquote--reverse footer:before,
+  blockquote.pull--right footer:before,
+  .blockquote--reverse small:before,
+  blockquote.pull--right small:before,
+  .blockquote--reverse .small:before,
+  blockquote.pull--right .small:before 
+    content: ''
+
+  .blockquote--reverse footer:after,
+  blockquote.pull--right footer:after,
+  .blockquote--reverse small:after,
+  blockquote.pull--right small:after,
+  .blockquote--reverse .small:after,
+  blockquote.pull--right .small:after 
+    content: '\00A0 \2014'
+
+
+  /* TOOLTIPS =============== */
+
+  .tooltip__wrapper
+    display: inline-block
+    margin: 0
+    padding: disabled
+    &.disabled 
+      cursor: not-allowed
+    .disabled, [disabled]
+      pointer-events: none
+
+  .tooltip
+    position: absolute
+    z-index: 1070
+    display: block
+    font-family: $font-stack
+    font-size: 0.75rem
+    font-weight: normal
+    line-height: 1.4
+    filter: alpha(opacity = 0)
+    opacity: 0
+    &.in
+      filter: alpha(opacity = 90)
+      opacity: .9
+    &.top
+      padding: 5px 0
+      margin-top: -3px
+    &.right
+      padding: 0 5px
+      margin-left: 3px
+    &.bottom
+      padding: 5px 0
+      margin-top: 3px
+    &.left
+      padding: 0 5px
+      margin-left: -3px
+    &.top .tooltip__arrow
+      bottom: 0
+      left: 50%
+      margin-left: -5px
+      border-width: 5px 5px 0
+      border-top-color: $col-text
+    &.top-left .tooltip__arrow
+      right: 5px
+      bottom: 0
+      margin-bottom: -5px
+      border-width: 5px 5px 0
+      border-top-color: $col-text
+    &.top-right .tooltip__arrow
+      bottom: 0
+      left: 5px
+      margin-bottom: -5px
+      border-width: 5px 5px 0
+      border-top-color: $col-text
+    &.right .tooltip__arrow
+      top: 50%
+      left: 0
+      margin-top: -5px
+      border-width: 5px 5px 5px 0
+      border-right-color: $col-text
+    &.left .tooltip__arrow
+      top: 50%
+      right: 0
+      margin-top: -5px
+      border-width: 5px 0 5px 5px
+      border-left-color: $col-text
+    &.bottom .tooltip__arrow
+      top: 0
+      left: 50%
+      margin-left: -5px
+      border-width: 0 5px 5px
+      border-bottom-color: $col-text
+    &.bottom-left .tooltip__arrow
+      top: 0
+      right: 5px
+      margin-top: -5px
+      border-width: 0 5px 5px
+      border-bottom-color: $col-text
+    &.bottom-right .tooltip__arrow
+      top: 0
+      left: 5px
+      margin-top: -5px
+      border-width: 0 5px 5px
+      border-bottom-color: $col-text
+
+  .tooltip__inner
+    max-width: 200px
+    padding: 3px 8px
+    color: $col-background
+    text-align: center
+    text-decoration: none
+    background-color: $col-text
+    border-radius: 4px
+
+  .tooltip__arrow
+    position: absolute
+    width: 0
+    height: 0
+    border-color: transparent
+    border-style: solid
+
+  /* Dropdowns / Dropups =============== */
+  
+  .caret
+    display: inline-block
+    width: 0
+    height: 0
+    margin-left: 4px
+    vertical-align: middle
+    border-top: 4px dashed
+    border-right: 4px solid transparent
+    border-left: 4px solid transparent
+
+  .dropdown, .dropdown--up
+    position: relative
+
+  .dropdown__toggle:focus
+    outline: 0
+
+  .dropdown__menu
+    position: absolute
+    top: 100%
+    left: 0
+    z-index: 1000
+    display: none
+    float: left
+    min-width: 160px
+    padding: 5px 0
+    margin: 0px 0 0
+    font-size: 13px
+    text-align: left
+    list-style: none
+    background-color: $col-boxes
+    -webkit-background-clip: padding-box
+    background-clip: padding-box
+    border: 1px solid transparent
+    border: 1px solid $col-borders
+    border-bottom-width: 3px
+    border-radius: 4px
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.125)
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.125)
+    &.pull--right
+      right: 0
+      left: auto
+    .nav__divider
+      height: 1px
+      margin: 9px 0
+      overflow: hidden
+      background-color: $col-borders
+    >
+      li > a
+        display: block
+        padding: 0.5em 0.5em
+        clear: both
+        font-weight: normal
+        line-height: 1.42857143
+        color: $col-boxes-text
+        white-space: nowrap
+        &:hover, &:focus
+          color: $col-tertiary
+          text-decoration: none
+          background-color: rgba($col-tertiary, 0.25)
+        i
+          margin-left: 0.25em 
+          margin-right: 0.25em
+      .active > a
+        color: $col-tertiary
+        text-decoration: none
+        background-color: rgba($col-tertiary, 0.2)
+        outline: 0
+        &:hover, &:focus
+          color: $col-tertiary
+          text-decoration: none
+          background-color: rgba($col-tertiary, 0.2)
+          outline: 0
+      .disabled > a
+        color: #777
+        &:hover, &:focus
+          color: #777
+        &:hover, &:focus
+          text-decoration: none
+          cursor: not-allowed
+          background-color: transparent
+          background-image: none
+          filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
+
+  .open >
+    .dropdown__menu
+      display: block
+    a
+      outline: 0
+
+  .dropdown__menu--right
+    right: 0
+    left: auto
+
+  .dropdown__menu--left
+    right: auto
+    left: 0
+
+  .dropdown__header
+    display: block
+    padding: 3px 20px
+    font-size: 12px
+    line-height: 1.42857143
+    color: #777
+    white-space: nowrap
+
+  .dropdown__backdrop
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 990
+
+  .pull--right > .dropdown__menu
+    right: 0
+    left: auto
+
+  .dropdown--up .caret, .navbar--fixed--bottom .dropdown .caret
+    content: ""
+    border-top: 0
+    border-bottom: 4px solid
+
+  .dropdown--up .dropdown__menu, .navbar--fixed--bottom .dropdown .dropdown__menu
+    top: auto
+    bottom: 100%
+    margin-bottom: 2px
+
+  @media (min-width: 768px)
+    .navbar__right, .header__user
+      .dropdown__menu
+        right: 0
+        left: auto
+      .dropdown__menu--left
+        right: auto
+        left: 0
+
+  /* WIDGET =============== */
+
+  .widget
+    min-height: 1em
+    margin-bottom: 1em 
+    border-radius: 3px
+    -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2)
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2)
+    color: $col-boxes
+    @include gradient__lightdiag($col-boxes-text)
+    > *
+      text-shadow: 0 1px 2px rgba($col-boxes-text, 0.9)
+    > *:last-child:not(.btn), .widget-content > *:last-child:not(.btn)
+      margin-bottom: 0 !important
+
+  .widget__content
+    padding: 1em
+    > *
+      text-shadow: 0 1px 2px rgba($col-boxes-text, 0.9)
+    > *:last-child:not(.btn), .widget-content > *:last-child:not(.btn)
+      margin-bottom: 0 !important
+
+  .widget__stat
+    float: right
+    word-break: break-all
+    font-weight: 300
+    font-size: 3.3em
+    line-height: 1
+    margin: 0
+    letter-spacing: -3px
+
+  .widget__title
+    word-break: break-all
+    font-weight: 300
+    font-size: 1.4em
+    line-height: 1.4
+    margin-bottom: 0.5em
+    letter-spacing: -1px
+    i
+      margin-right: 0.5em
+      line-height: 1.4
+
+  .widget--lg
+    padding: 2em
+    border-radius: 4px
+    border-bottom-width: 3px
+
+  .widget--sm
+    padding: 0.5em
+    border-radius: 2px
+
+  .widget--primary
+    color: $col-primary-contrast
+    @include gradient__lightdiag($col-primary)
+    > *
+      text-shadow: 0 1px 2px rgba($col-primary, 0.9)
+
+  .widget--success
+    color: #fff
+    @include gradient__lightdiag($col-success)
+    > *
+      text-shadow: 0 1px 2px rgba(0,0,0, 0.9)
+
+  .widget--warning
+    color: #fff
+    @include gradient__lightdiag($col-warning)
+    > *
+      text-shadow: 0 1px 2px rgba(0,0,0, 0.9)
+
+  .widget--danger
+    color: #fff
+    @include gradient__lightdiag($col-danger)
+    > *
+      text-shadow: 0 1px 2px rgba(0,0,0, 0.9)
+
+  .widget--info
+    color: #fff
+    @include gradient__lightdiag($col-info)
+    > *
+      text-shadow: 0 1px 2px rgba(0,0,0, 0.9)
+
+  /* IMAGE ====================== */
+
+  .img--responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+  .img--rounded
+    border-radius: 6px
+
+  .img--circle
+    border-radius: 50%
+
+  /* LABELS =============== */
+
+  .label
+    display: inline
+    padding: 0.2em 0.6em 0.3em
+    font-size: 0.8em
+    font-weight: bold
+    line-height: 1
+    color: $col-boxes
+    text-align: center
+    white-space: nowrap
+    vertical-align: baseline
+    border-radius: 0.25em
+    background-color: rgba($col-boxes-text, 0.8)
+    &:empty
+      display: none
+    &[href]
+      &:hover, &:focus
+        background-color: $col-text
+
+  a.label
+    &:hover, &:focus
+      color: $col-boxes
+      text-decoration: none
+      cursor: pointer
+
+  .btn .label
+    position: relative
+    top: -1px
+
+
+  .label--primary
+    background-color: $col-primary
+    color: $col-primary-contrast
+    &[href]
+      &:hover, &:focus
+        background-color: darken($col-primary, 15%)
+
+  .label--success
+    background-color: $col-success
+    &[href]
+      &:hover, &:focus
+        background-color: darken($col-success, 15%)
+
+  .label--info
+    background-color: $col-info
+    &[href]
+      &:hover, &:focus
+        background-color: darken($col-info, 15%)
+
+  .label--warning
+    background-color: $col-warning
+    &[href]
+      &:hover, &:focus
+        background-color: darken($col-warning, 15%)
+
+  .label--danger
+    background-color: $col-danger
+    &[href]
+      &:hover, &:focus
+        background-color: darken($col-danger, 15%)
+
+  .label--block
+    display: block
+    margin-bottom: 0.875em
+
+  /* ALERTS =============== */
+
+  .alert
+    position: relative
+    padding: 1em
+    margin-bottom: 1.5em
+    border: 1px solid transparent
+    border-radius: 3px
+    > *:last-child
+      margin-bottom: 0
+  
+  .alert__title
+    margin-top: 0
+    color: inherit
+  
+  .alert__link
+    font-weight: bold
+  >
+    p, ul
+      margin-bottom: 0
+    p + p
+      margin-top: 5px
+
+  .alert__timer
+    width: 0%
+    height: 2px
+    background: white
+    position: absolute
+    bottom: 0
+    right: 0
+
+  .alert--dismissible
+    padding-right: 2em
+    .close, .btn--close  
+      position: relative
+      top: -2px
+      right: -21px
+      color: inherit
+      text-decoration: none !important
+
+  .alert--success
+    color: darken($col-success,5%)
+    background-color: tint($col-success,90%)
+    border-color: $col-success
+    hr
+      border-top-color: tint($col-success,75%)
+    .alert__link, a, .btn--close
+      color: darken($col-success,5%)
+      text-decoration: underline
+      &:hover, &:focus
+        color: tint($col-success,15%)
+        opacity: 1
+
+  .alert--warning
+    color: darken($col-warning, 10%)
+    background-color: tint($col-warning,90%)
+    border-color: $col-warning
+    hr
+      border-top-color: tint($col-warning,75%)
+    .alert__link, a, .btn--close
+      color: darken($col-warning, 10%)
+      text-decoration: underline
+      &:hover, &:focus
+        color: tint($col-warning,15%)
+        opacity: 1
+
+  .alert--danger
+    color: darken($col-danger, 5%)
+    background-color: tint($col-danger,90%)
+    border-color: $col-danger
+    hr
+      border-top-color: tint($col-danger,75%)
+    .alert__link, a, .btn--close
+      color: darken($col-danger, 5%)
+      text-decoration: underline
+      &:hover, &:focus
+        color: tint($col-danger,15%)
+        opacity: 1
+
+  .alert--info
+    color: darken($col-info,5%)
+    background-color: tint($col-info,90%)
+    border-color: $col-info
+    hr
+      border-top-color: tint($col-info,75%)
+    .alert__link, a, .btn--close
+      color: darken($col-info,5%)
+      text-decoration: underline
+      &:hover, &:focus
+        color: tint($col-info,15%)
+        opacity: 1
+
+
+  /* POPUNDER ALERTS
+
+  .alert--popunder
+    margin-bottom: 0
+    border: 0
+    border-radius: 0
+    padding: 1.25em 1em
+    width: 100%
+    background: rgba($col-text, 0.8)
+    color: $col-background
+    text-align: center
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25)
+    z-index: 99
+    position: absolute
+    top: -100%
+    -webkit-transition: top 0.8s ease-in-out
+    transition: top 0.8s ease-in-out
+    &.alert--popunder-out
+      top: 0
+    > *
+      margin-bottom: 0
+    > a:not(.btn)
+      color: white
+      &:hover, &:focus
+        color: white !important
+
+  .alert--popunder.alert--success
+    background: rgba($col-success, 0.93)
+  .alert--popunder.alert--warning
+    background: rgba($col-warning, 0.93)
+  .alert--popunder.alert--danger
+    background: rgba($col-danger, 0.93)
+  .alert--popunder.alert--info
+    background: rgba($col-info, 0.93)
+
+
+  /* PROGRESS BARS =============== */
+
+  .progress
+    font-size: 0.75em
+    line-height: 1.33333
+    height: 1.33333em
+    margin-top: 0.25em
+    margin-bottom: 1.33333em
+    overflow: hidden
+    background-color: rgba($col-borders,0.375)
+    border-radius: 2px
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3)
+    position: relative
+    text-indent: 0.25em
+
+  .progress__bar
+    float: left
+    position: relative
+    z-index: 2
+    white-space: nowrap
+    overflow: hidden
+    width: 0
+    height: 100%
+    //font-size: 12px
+    //line-height: 16px
+    color: #fff
+    text-align: left
+    text-indent: 0.375em
+    background-color: $col-primary
+    border-radius: 2px 0 0 2px
+    //-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3)
+    //box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3)
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3)
+    -webkit-transition: width .6s ease
+    -o-transition: width .6s ease
+    transition: width .6s ease
+
+  .progress__num 
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1
+    //font-size: 12px
+    //line-height: 16px
+
+  .progress__stat
+    font-size: 0.875em
+
+  .progress--striped .progress__bar, .progress__bar--striped
+    background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    -webkit-background-size: 40px 40px
+    background-size: 40px 40px
+
+  .progress--active .progress__bar, .progress__bar--active
+    -webkit-animation: progress-bar-stripes 2s linear infinite
+    -o-animation: progress-bar-stripes 2s linear infinite
+    animation: progress-bar-stripes 2s linear infinite
+
+  .progress__bar--success
+    background-color: $col-success
+
+  .progress--striped .progress__bar--success
+    background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+
+  .progress__bar--info
+    background-color: $col-info
+
+  .progress--striped .progress__bar--info
+    background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+
+  .progress__bar--warning
+    background-color: $col-warning
+
+  .progress--striped .progress__bar--warning
+    background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+
+  .progress__bar--danger
+    background-color: $col-danger
+
+  .progress--striped .progress__bar--danger
+    background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.07) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.07) 50%, rgba(0, 0, 0, 0.07) 75%, transparent 75%, transparent)
+
+
+  /* ICONS =============== */
+
+  .icon 
+    line-height: 0.5
+    vertical-align: top
+    i
+      font-size: 1.2em
+
+  .icon--left 
+    @extend .icon
+    float: left
+    margin-right: 0.5em
+  
+  .icon--right 
+    @extend .icon
+    float: right
+    margin-left: 0.4em
+
+
+  /* LIST GROUPS ==================== */
+
+  .listgroup
+    padding-left: 0
+    margin-bottom: 20px
+
+  .listgroup__item
+    position: relative
+    display: block
+    padding: 10px 15px
+    margin-bottom: -1px
+    color: $col-boxes-text
+    background-color: $col-boxes
+    border: 1px solid $col-borders
+    &:first-child
+      border-top-left-radius: 4px
+      border-top-right-radius: 4px
+    &:last-child
+      margin-bottom: 0
+      border-bottom-right-radius: 4px
+      border-bottom-left-radius: 4px
+
+  a.listgroup__item
+    .listgroup__item__heading
+      color: $col-boxes-text
+    &:hover, &:focus
+      color: $col-tertiary
+      text-decoration: none
+      background-color: tint($col-tertiary,75%)
+
+  .listgroup__item
+    &.disabled
+      color: rgba($col-boxes-text,0.5)
+      cursor: not-allowed
+      background-color: $col-boxes
+      &:hover, &:focus
+        color: rgba($col-boxes-text,0.5)
+        cursor: not-allowed
+        background-color: $col-boxes
+      .listgroup__item__heading, &:hover .listgroup__item__heading, &:focus .listgroup__item__heading
+        color: inherit
+      .listgroup__item__text, &:hover .listgroup__item__text, &:focus .listgroup__item__text
+        color: rgba($col-boxes-text,0.5)
+    &.active
+      z-index: 2
+      color: $col-primary-contrast
+      background-color: $col-primary
+      border-color: $col-primary
+      &:hover, &:focus
+        z-index: 2
+        color: $col-tertiary-contrast
+        background-color: $col-tertiary
+        // border-color: $col-tertiary-contrast
+      .listgroup__item__heading, &:hover .listgroup__item__heading, &:focus .listgroup__item__heading, .listgroup__item__heading > small, &:hover .listgroup__item__heading > small, &:focus .listgroup__item__heading > small, .listgroup__item__heading > .small, &:hover .listgroup__item__heading > .small, &:focus .listgroup__item__heading > .small
+        color: inherit
+      .listgroup__item__text, &:hover .listgroup__item__text, &:focus .listgroup__item__text
+        color: $col-secondary
+
+  .listgroup__item--success
+    color: darken($col-success, 5%)
+    background-color: tint($col-success,75%)
+    > .badge
+      color: darken($col-success, 5%)
+      background-color: #fff
+
+  a.listgroup__item--success
+    color: darken($col-success, 5%)
+    .listgroup__item__heading
+      color: inherit
+    &:hover, &:focus
+      color: #fff
+      background-color: $col-success
+    &.active
+      color: #fff
+      background-color: $col-success
+      border-color: $col-success
+      &:hover, &:focus
+        color: #fff
+        background-color: $col-success
+        border-color: $col-success
+
+  .listgroup__item--info
+    color: $col-info
+    background-color: tint($col-info,75%)
+    > .badge
+      color: $col-info
+      background-color: #fff
+
+  a.listgroup__item--info
+    color: $col-info
+    .listgroup__item__heading
+      color: inherit
+    &:hover, &:focus
+      background-color: $col-info
+      color: #fff
+    &.active
+      background-color: $col-info
+      color: #fff
+      border-color: $col-info
+      &:hover, &:focus
+        background-color: $col-info
+        color: #fff
+        border-color: darken($col-info, 5%)
+
+  .listgroup__item--warning
+    color: darken($col-warning, 10%)
+    background-color: tint($col-warning,75%)
+    > .badge
+      color: darken($col-warning, 10%)
+      background-color: #fff
+
+  a.listgroup__item--warning
+    color: darken($col-warning, 10%)
+    .listgroup__item__heading
+      color: inherit
+    &:hover, &:focus
+      color: #fff
+      background-color: darken($col-warning, 5%)
+    &.active
+      color: #fff
+      background-color: darken($col-warning, 5%)
+      &:hover, &:focus
+        color: #fff
+        background-color: darken($col-warning, 5%)
+
+  .listgroup__item--danger
+    color: darken($col-danger, 5%)
+    background-color: tint($col-danger,75%)
+    > .badge
+      color: darken($col-danger, 5%)
+      background-color: #fff
+
+  a.listgroup__item--danger
+    color: $col-danger
+    .listgroup__item__heading
+      color: inherit
+    &:hover, &:focus
+      color: #fff
+      background-color: $col-danger
+    &.active
+      color: #fff
+      background-color: $col-danger
+      border-color: darken($col-danger, 5%)
+      &:hover, &:focus
+        color: #fff
+        background-color: $col-danger
+        border-color: darken($col-danger, 5%)
+
+  .listgroup__item__heading
+    margin-top: 0
+    margin-bottom: 5px
+
+  .listgroup__item__text
+    margin-bottom: 0
+    line-height: 1.3
+
+
+  /* PANELS =============== */ 
+
+  .panel
+    margin-bottom: 1em
+    color: $col-boxes-text
+    background-color: $col-boxes
+    border: 1px solid transparent
+    border-bottom-width: 2px
+    border-radius: 3px
+    -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.125)
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.125)
+    border-bottom-width: 2px
+
+  .panel__body
+    padding: 1em
+    > *:last-child:not(.btn), .panel__footer > *:last-child:not(.btn)
+      margin-bottom: 0
+    p
+      font-size: 0.875em
+    h1,h2,h3,h4
+      margin-bottom: 0.5em
+
+  .panel__body--grey
+    background: darken($col-boxes,6%)
+    border-bottom: 2px solid $col-borders
+    color: $col-boxes-text
+
+  .panel__header
+    padding: 0.875em 1em
+    border-bottom: 2px solid transparent
+    border-top-left-radius: 2px
+    border-top-right-radius: 2px
+    .badge
+      float: right
+    .dropdown .dropdown__toggle
+      color: inherit
+    p
+      margin-bottom: 0.5em
+      line-height: 1.2
+    h1, h2, h3
+      margin-bottom: 0.2em
+    > *:last-child:not(.btn)
+      margin-bottom: 0
+
+  .panel__title
+    margin-top: 0
+    margin-bottom: 0
+    color: inherit
+    >
+      a, small, .small, small > a, .small > a
+        color: inherit
+      a:hover, small > a:hover, .small > a:hover
+        color: $col-tertiary
+
+  .panel__footer
+    font-size: 0.875em
+    padding: 0.625em 1.125em
+    color: $col-boxes-text
+    border-top: 1px solid $col-borders
+    border-bottom-right-radius: 3px
+    border-bottom-left-radius: 3px
+
+
+  .panel__label
+    display: block
+    line-height: 1.4
+    text-align: left
+    padding: 0
+    color: $col-text
+    background: $col-background
+    label
+      margin: 0
+      border-radius: 0
+      padding: 0.5em 0.5em 0.5em 0.875em
+      font-size: 13px
+      line-height: 1.8em
+      text-align: left
+    i.fa,
+    [class^="avm-"]
+      font-size: 1.8em
+      margin-left: 0
+      vertical-align: top
+    label input
+      margin-right: 5px
+
+  .panel >
+    .listgroup, .panel-collapse > .listgroup
+      margin-bottom: 0
+    .listgroup .listgroup__item, .panel-collapse > .listgroup .listgroup__item
+      border-width: 1px 0 1px 0
+      border-radius: 0
+    .listgroup:first-child .listgroup__item:first-child, .panel-collapse > .listgroup:first-child .listgroup__item:first-child
+      border-top: 0
+      border-top-left-radius: 3px
+      border-top-right-radius: 3px
+    .listgroup:last-child .listgroup__item:last-child, .panel-collapse > .listgroup:last-child .listgroup__item:last-child
+      border-bottom: 0
+      border-bottom-right-radius: 3px
+      border-bottom-left-radius: 3px
+
+  .panel__header + .listgroup .listgroup__item:first-child, .listgroup + .panel__footer
+    border-top-width: 0
+
+  .panel >
+    .table, .grid--responsive > .table, .panel-collapse > .table
+      margin-bottom: 0
+    .table caption, .grid--responsive > .table caption, .panel-collapse > .table caption
+      padding-right: 15px
+      padding-left: 15px
+    .table:first-child, .grid--responsive:first-child > .table:first-child, .table:first-child > thead:first-child > tr:first-child, .grid--responsive:first-child > .table:first-child > thead:first-child > tr:first-child, .table:first-child > tbody:first-child > tr:first-child, .grid--responsive:first-child > .table:first-child > tbody:first-child > tr:first-child
+      border-top-left-radius: 3px
+      border-top-right-radius: 3px
+    .table:first-child > thead:first-child > tr:first-child td:first-child, .grid--responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child, .table:first-child > tbody:first-child > tr:first-child td:first-child, .grid--responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child, .table:first-child > thead:first-child > tr:first-child th:first-child, .grid--responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child, .table:first-child > tbody:first-child > tr:first-child th:first-child, .grid--responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child
+      border-top-left-radius: 3px
+    .table:first-child > thead:first-child > tr:first-child td:last-child, .grid--responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child, .table:first-child > tbody:first-child > tr:first-child td:last-child, .grid--responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child, .table:first-child > thead:first-child > tr:first-child th:last-child, .grid--responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child, .table:first-child > tbody:first-child > tr:first-child th:last-child, .grid--responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child
+      border-top-right-radius: 3px
+    .table:last-child, .grid--responsive:last-child > .table:last-child, .table:last-child > tbody:last-child > tr:last-child, .grid--responsive:last-child > .table:last-child > tbody:last-child > tr:last-child, .table:last-child > tfoot:last-child > tr:last-child, .grid--responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child
+      border-bottom-right-radius: 3px
+      border-bottom-left-radius: 3px
+    .table:last-child > tbody:last-child > tr:last-child td:first-child, .grid--responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child, .table:last-child > tfoot:last-child > tr:last-child td:first-child, .grid--responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child, .table:last-child > tbody:last-child > tr:last-child th:first-child, .grid--responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child, .table:last-child > tfoot:last-child > tr:last-child th:first-child, .grid--responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child
+      border-bottom-left-radius: 3px
+    .table:last-child > tbody:last-child > tr:last-child td:last-child, .grid--responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child, .table:last-child > tfoot:last-child > tr:last-child td:last-child, .grid--responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child, .table:last-child > tbody:last-child > tr:last-child th:last-child, .grid--responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child, .table:last-child > tfoot:last-child > tr:last-child th:last-child, .grid--responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child
+      border-bottom-right-radius: 3px
+    .panel__body +
+      .table, .grid--responsive
+        border-top: 1px solid $col-borders
+    .table + .panel__body, .grid--responsive + .panel__body
+      border-top: 1px solid $col-borders
+    .table > tbody:first-child > tr:first-child
+      th, td
+        border-top: 0
+    .table--bordered, .grid--responsive > .table--bordered
+      border: 0
+    .table--bordered > thead > tr > th:first-child, .grid--responsive > .table--bordered > thead > tr > th:first-child, .table--bordered > tbody > tr > th:first-child, .grid--responsive > .table--bordered > tbody > tr > th:first-child, .table--bordered > tfoot > tr > th:first-child, .grid--responsive > .table--bordered > tfoot > tr > th:first-child, .table--bordered > thead > tr > td:first-child, .grid--responsive > .table--bordered > thead > tr > td:first-child, .table--bordered > tbody > tr > td:first-child, .grid--responsive > .table--bordered > tbody > tr > td:first-child, .table--bordered > tfoot > tr > td:first-child, .grid--responsive > .table--bordered > tfoot > tr > td:first-child
+      border-left: 0
+    .table--bordered > thead > tr > th:last-child, .grid--responsive > .table--bordered > thead > tr > th:last-child, .table--bordered > tbody > tr > th:last-child, .grid--responsive > .table--bordered > tbody > tr > th:last-child, .table--bordered > tfoot > tr > th:last-child, .grid--responsive > .table--bordered > tfoot > tr > th:last-child, .table--bordered > thead > tr > td:last-child, .grid--responsive > .table--bordered > thead > tr > td:last-child, .table--bordered > tbody > tr > td:last-child, .grid--responsive > .table--bordered > tbody > tr > td:last-child, .table--bordered > tfoot > tr > td:last-child, .grid--responsive > .table--bordered > tfoot > tr > td:last-child
+      border-right: 0
+    .table--bordered > thead > tr:first-child > td, .grid--responsive > .table--bordered > thead > tr:first-child > td, .table--bordered > tbody > tr:first-child > td, .grid--responsive > .table--bordered > tbody > tr:first-child > td, .table--bordered > thead > tr:first-child > th, .grid--responsive > .table--bordered > thead > tr:first-child > th, .table--bordered > tbody > tr:first-child > th, .grid--responsive > .table--bordered > tbody > tr:first-child > th, .table--bordered > tbody > tr:last-child > td, .grid--responsive > .table--bordered > tbody > tr:last-child > td, .table--bordered > tfoot > tr:last-child > td, .grid--responsive > .table--bordered > tfoot > tr:last-child > td, .table--bordered > tbody > tr:last-child > th, .grid--responsive > .table--bordered > tbody > tr:last-child > th, .table--bordered > tfoot > tr:last-child > th
+      border-bottom: 0
+    .grid--responsive
+      > .table--bordered > tfoot > tr:last-child > th
+        border-bottom: 0
+      margin-bottom: 0
+      border: 0
+
+  .panel__group
+    margin-bottom: 1em
+    .panel
+      margin-bottom: 0
+      border-radius: 4px
+      + .panel
+        margin-top: 5px
+    .panel__header
+      border-bottom: 0
+      + .panel-collapse >
+        .panel__body, .listgroup
+          border-top: 1px solid $col-borders
+    .panel__footer
+      border-top: 0
+      + .panel-collapse .panel__body
+        border-bottom: 2px solid $col-borders
+
+
+  /* PANEL VARIANTS */
+
+  .panel
+    border-color: $col-borders
+    >
+      .panel__header
+        color: $col-boxes-text
+        background-color: $col-boxes
+        @include gradient__darkdiag($col-boxes)
+        border-color: $col-borders
+        + .panel-collapse > .panel__body
+          border-top-color: $col-borders
+        .badge
+          color: $col-boxes
+          background-color: $col-boxes-text
+      .panel__footer,
+      .panel__footer + .panel-collapse > .panel__body
+        border-color: $col-borders
+
+  .panel--primary
+    border-color: $col-primary
+    >
+      .panel__header
+        color: $col-primary-contrast
+        background-color: $col-primary
+        @include gradient__darkdiag($col-primary)
+        border-color: darken($col-primary,10%)
+        a
+          color: rgba($col-primary-contrast,0.87)
+          border-bottom: 1px dotted rgba($col-primary-contrast,0.87)
+          &:hover
+            color: $col-primary-contrast
+            border-bottom-color: $col-primary-contrast
+        + .panel-collapse > .panel__body
+          border-top-color: $col-primary
+        .badge
+          color: $col-primary
+          background-color: $col-primary-contrast
+      .panel__body
+        background-color: rgba($col-primary,0.06)
+      .panel__footer,
+      .panel__footer + .panel-collapse > .panel__body
+        border-color: $col-primary
+        background-color: rgba($col-primary,0.12)
+
+  .panel--success
+    border-color: $col-success
+    a 
+      color: darken($col-success, 10%)
+      &:hover 
+        color: tint($col-success, 25%)
+    >
+      .panel__header
+        border-color: $col-success
+        border-bottom-color: darken($col-success,10%)
+        background-color: $col-success
+        @include gradient__darkdiag($col-success)
+        color: white
+        a
+          color: rgba(255,255,255,0.8)
+          border-bottom: 1px dotted rgba(255,255,255,0.8)
+          &:hover
+            color: #fff
+            border-bottom-color: #fff
+        + .panel-collapse > .panel__body
+          border-top-color: $col-success
+        .badge
+          color: $col-success
+          background-color: #fff
+      .panel__body
+        background-color: rgba($col-success,0.06)
+      .panel__footer,
+      .panel__footer + .panel-collapse > .panel__body
+        border-color: $col-success
+        background-color: rgba($col-success,0.12)
+
+  .panel__header--partial-on
+    background: repeating-linear-gradient(-45deg, $col-success, $col-success 10px, darken($col-success,4%) 10px, darken($col-success,4%) 20px)
+
+  .panel--info
+    border-color: $col-info
+    a 
+      color: darken($col-info, 10%)
+      &:hover 
+        color: tint($col-info, 25%)
+    >
+      .panel__header
+        border-color: $col-info
+        border-bottom-color: darken($col-info,10%)
+        background-color: $col-info
+        @include gradient__darkdiag($col-info)
+        color: white
+        a
+          color: rgba(255,255,255,0.8)
+          border-bottom: 1px dotted rgba(255,255,255,0.8)
+          &:hover
+            color: #fff
+            border-bottom-color: #fff
+        + .panel-collapse > .panel__body
+          border-top-color: $col-info
+        .badge
+          color: $col-info
+          background-color: #fff
+      .panel__body
+        background-color: rgba($col-info,0.06)
+      .panel__footer,
+      .panel__footer + .panel-collapse > .panel__body
+        border-color: $col-info
+        background-color: rgba($col-info,0.12)
+
+  .panel--warning
+    border-color: $col-warning
+    a 
+      color: darken($col-warning, 10%)
+      &:hover 
+        color: tint($col-warning, 25%)
+    >
+      .panel__header
+        border-color: $col-warning
+        border-bottom-color: darken($col-warning,10%)
+        background-color: $col-warning
+        @include gradient__darkdiag($col-warning)
+        color: white
+        a
+          color: rgba(255,255,255,0.8)
+          border-bottom: 1px dotted rgba(255,255,255,0.8)
+          &:hover
+            color: #fff
+            border-bottom-color: #fff
+        + .panel-collapse > .panel__body
+          border-top-color: $col-warning
+        .badge
+          color: $col-warning
+          background-color: #fff
+      .panel__body
+        background-color: rgba($col-warning,0.06)
+      .panel__footer,
+      .panel__footer + .panel-collapse > .panel__body
+        border-color: $col-warning
+        background-color: rgba($col-warning,0.12)
+
+  .panel--danger
+    border-color: $col-danger
+    a 
+      color: darken($col-danger, 10%)
+      &:hover 
+        color: tint($col-danger, 25%)
+    >
+      .panel__header
+        border-color: $col-danger
+        border-bottom-color: darken($col-danger,10%)
+        background-color: $col-danger
+        @include gradient__darkdiag($col-danger)
+        color: white
+        a
+          color: rgba(255,255,255,0.8)
+          border-bottom: 1px dotted rgba(255,255,255,0.8)
+          &:hover
+            color: #fff
+            border-bottom-color: #fff
+        + .panel-collapse > .panel__body
+          border-top-color: $col-danger
+        .badge
+          color: $col-danger
+          background-color: #fff
+      .panel__body
+        background-color: rgba($col-danger,0.06)
+      .panel__footer,
+      .panel__footer + .panel-collapse > .panel__body
+        border-color: $col-danger
+        background-color: rgba($col-danger,0.12)
+
+  .panel__header label, .panel__fig--single label
+    font-size: 100%
+
+  .panel__header label > *:last-child:not(.btn), .panel__fig--single label > *:last-child:not(.btn)
+    margin: 0
+
+  .panel__header
+    .form__group__radio, .form__group__checkbox
+      padding: 0
+      margin: 0
+
+  .panel__fig--single
+    .form__group__radio, .form__group__checkbox
+      padding: 0
+      margin: 0
+
+  .panel__fig--list
+    .form__group__radio
+      p, .figterms
+        margin-left: 30px
+        padding: 0.5em 0
+      padding: 0
+      margin: 10px 0
+    .form__group__checkbox
+      padding: 0
+      margin: 10px 0
+    .form__group__radio > label, .form__group__checkbox > label
+      display: block
+      background: #f5f5f5
+      padding: 10px 10px 10px 30px
+    .form__group__radio > label:active, .form__group__checkbox > label:active
+      background: $col-borders !important
+
+  .panel__fig--list--inline ul.list--inline li
+    display: inline-block
+    min-width: 3em
+    text-align: center
+    margin: 0
+    padding: 0.875em 0.5em
+    input[type='radio']
+      margin: 0px auto 0 auto
+    label
+      width: 100%
+      display: block
+      margin: 0
+
+  .panel__fig--range
+    position: relative
+
+  .fig--min, .fig--max
+    font-size: 80%
+    line-height: 2
+
+  .fig--min
+    float: left
+
+  .fig--max
+    float: right
+    margin-right: 17.5%
+    text-align: right
+ 
+  .panel__status
+    float: left
+    color: white
+    background-color: rgba($col-text,0.5)
+    border-radius: 50%
+    width: 44px
+    height: 44px
+    text-align: center
+    line-height: 42px
+    margin: 0 12px 12px 0
+    font-size: 1.5em
+    &.panel__status--success
+      background: $col-success
+    &.panel__status--warning
+      background: $col-warning
+    &.panel__status--danger
+      background: $col-danger
+
+  .panel__console
+    float: left
+    width: 64px
+    height: 54px
+    background: $col-text
+    border-radius: 4px
+    margin: 0 0.875em 0.5em 0
+    border: 2px solid $col-borders
+    border-bottom-width: 7px
+    position: relative
+    .panel__console__thumb, img
+      max-width: 60px
+      max-height: 50px
+    &::before 
+      display: block
+      content: ""
+      background: $col-success
+      width: 5px
+      height: 5px
+      border-radius: 50%
+      position: absolute
+      bottom: -5px
+      right: 3px
+
+  .panel--vblade
+    hr
+      margin: 10px 0
+    .panel__label
+      background: $col-boxes
+    .panel__heading
+      position: relative
+      padding: 0.875em
+      min-height: 140px
+      border-radius: 0
+    .panel__title
+      word-break: break-all
+      margin-bottom: 0.6em
+
+  .panel--vblade.panel--warning > .panel__heading
+    background: darken($col-warning,10%)
+  .panel--vblade.panel--danger > .panel__heading
+    background: darken($col-danger,10%)
+  .panel--vblade.panel--success > .panel__heading
+    background: darken($col-success,10%)
+  .panel--vblade.panel--info > .panel__heading
+    background: darken($col-info,10%)
+  
+  .panel--vblade > .panel__heading
+    .dropdown__menu > li > a
+      color: $col-text
+
+
+  /* MEDIA EMBEDS =============== */
+
+  .embed--responsive
+    position: relative
+    display: block
+    height: 0
+    padding: 0
+    overflow: hidden
+    .embed--responsive__item, iframe, embed, object, video
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border: 0
+
+  .embed--responsive--16by9
+    padding-bottom: 56.25%
+
+  .embed--responsive--4by3
+    padding-bottom: 75%
+
+
+  /* MODALS =============== */
+
+  .btn--close
+    float: right
+    font-size: 21px
+    font-weight: bold
+    line-height: 1
+    color: $col-boxes-text
+    text-shadow: 0 1px 0 $col-boxes
+    filter: alpha(opacity = 40)
+    opacity: .4
+    &:hover, &:focus
+      color: $col-tertiary
+      text-decoration: none
+      cursor: pointer
+      filter: alpha(opacity = 80)
+      opacity: .80
+
+  button.btn--close
+    -webkit-appearance: none
+    padding: 0
+    cursor: pointer
+    background: transparent
+    border: 0
+
+  .body--modalopen
+    overflow: hidden
+
+  .modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1050
+    display: none
+    overflow: hidden
+    background: rgba(0,0,0,0.8)
+    -webkit-overflow-scrolling: touch
+    outline: 0
+    &.fade .modal__dialog
+      -webkit-transition: -webkit-transform .3s ease-out
+      -o-transition: -o-transform .3s ease-out
+      transition: transform .3s ease-out
+      -webkit-transform: translate(0, -25%)
+      -ms-transform: translate(0, -25%)
+      -o-transform: translate(0, -25%)
+      transform: translate(0, -25%)
+    &.in .modal__dialog
+      -webkit-transform: translate(0, 0)
+      -ms-transform: translate(0, 0)
+      -o-transform: translate(0, 0)
+      transform: translate(0, 0)
+
+  .body--modalopen .modal
+    overflow-x: hidden
+    overflow-y: auto
+
+  .modal__dialog
+    position: relative
+    width: auto
+    margin: 10px
+
+  .modal__dialog__content
+    position: relative
+    background-color: $col-boxes
+    -webkit-background-clip: padding-box
+    background-clip: padding-box
+    border: 1px solid $col-borders
+    border: 1px solid rgba($col-borders, 0.2)
+    border-radius: 6px
+    outline: 0
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5)
+
+  .modal__backdrop
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1040
+    background-color: #000
+    &.fade
+      filter: alpha(opacity = 0)
+      opacity: 0
+    &.in
+      filter: alpha(opacity = 50)
+      opacity: .5
+
+  .modal__dialog__content__header
+    min-height: 16.42857143px
+    padding: 15px
+    border-bottom: 1px solid $col-borders
+    .close
+      margin-top: -2px
+
+  .modal__dialog__content__title
+    margin: 0
+    line-height: 1.42857143
+
+  .modal__dialog__content__body
+    position: relative
+    padding: 15px
+    .pre
+      white-space: pre
+
+  .modal__dialog__content__footer
+    padding: 15px
+    text-align: right
+    border-top: 1px solid $col-borders
+    .btn + .btn
+      margin-bottom: 0
+      margin-left: 5px
+    .btn__group .btn + .btn
+      margin-left: -1px
+    .btn--block + .btn--block
+      margin-left: 0
+
+  .modal__scrollbar__measure
+    position: absolute
+    top: -9999px
+    width: 50px
+    height: 50px
+    overflow: scroll
+
+  @media (min-width: 768px)
+    .modal__dialog
+      width: 600px
+      margin: 30px auto
+    .modal__dialog__content
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+    .modal__dialog--sm
+      width: 300px
+
+  @media (min-width: 992px)
+    .modal__dialog--lg
+      width: 900px
+
+  // Tile Grid - Fixes bad floats
+
+  @media (max-width: 767px)
+    .tileview > div:nth-child(3n+1)
+      clear: none
+  @media (min-width: 768px) and (max-width: 991px)
+    .tileview > div:nth-child(3n+1)
+      clear: none
+  @media (min-width: 992px) and (max-width: 1199px)
+    .tileview > div:nth-child(2n+1)
+      clear: left
+  @media (min-width: 1200px)
+    .tileview > div:nth-child(3n+1)
+      clear: left
+
+  /* PRODUCT PANELS 
+
+  .view--tiled > .panel--product
+    width: 49%
+    float: left
+    margin-right: 2%
+    &:nth-child(even)
+      margin-right: 0
+    .btn__label
+      display: none
+
+  @media (max-width: 767px)
+    .view--tiled .panel--product
+      width: 100%
+      margin-right: 0 !important
+    .grid--products img
+      display: inline-block
+  
+  /* RANDOM / MISCELLANEOUS ====================== */
+
+  /* CHART.JS MODS */
+
+  .line-legend
+    margin: 1em 0 0 0
+    background-color: rgba($col-boxes-text,0.1)
+    border: 1px solid rgba($col-boxes-text,0.3)
+    color: rgba($col-boxes-text,1)
+    padding: 0.5em
+    text-align: center
+    li
+      display: inline
+      margin-right: 1em
+
+
+/* VARIATIONS BASED ON USER/PORTAL =============== */
+/* ============================================= */
+
+/* MARKETPLACE STYLES =============== */
+
+.body--client
+  .as__wrap
+    margin-bottom: 0
+    .header__nav
+      .btn, .btn__group > .btn
+        color: $col-primary
+        background: rgba($col-primary,0.15)
+        &:focus
+          color: $col-primary
+          background: $col-primary-contrast
+        &:hover
+          color: $col-tertiary-contrast
+          background: $col-tertiary
+      .btn__group.open .dropdown__toggle.btn, .btn.btn-active
+        color: $col-tertiary-contrast
+        background: $col-tertiary
+    .main
+      bottom: 0
+    .header
+      background: $col-primary-contrast
+    .header__widget__container
+      display: block
+      float: right
+    .header__widget
+      background: rgba($col-primary, 0.15)
+      color: $col-primary
+      padding: 0 36px 0 10px
+    .header__widget__controls
+      position: absolute
+      left: auto
+      right: 5px
+      a
+        color: rgba($col-primary, 0.5)
+        &:hover
+          color: $col-tertiary
+
+/* DEV STYLES */
+
+.body--dev 
+  .as__wrap
+    margin-bottom: 0
+    .header
+      background: $col-primary
+      @include gradient__lightdiag($col-primary)
+      .brand__label
+        color: $col-primary-contrast
+    .main
+      bottom: 0

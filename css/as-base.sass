@@ -1,0 +1,609 @@
+/*  AirSembly Base.sass */
+/*  v3.0 "Aura" */
+
+/* ========== NORMALIZE 4.1.1 ========== */
+
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+
+html 
+  font-family: sans-serif 
+  -ms-text-size-adjust: 100% 
+  -webkit-text-size-adjust: 100% 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+body 
+  margin: 0
+
+/* HTML5 display definitions ========================================================================== */
+
+article,
+aside,
+details, 
+figcaption,
+figure,
+footer,
+header,
+main, 
+menu,
+nav,
+section,
+summary  
+  display: block
+
+audio,
+canvas,
+progress,
+video 
+  display: inline-block
+
+audio:not([controls]) 
+  display: none
+  height: 0
+
+progress 
+  vertical-align: baseline
+
+template, 
+[hidden] 
+  display: none
+
+/* Links ========================================================================== */
+
+a 
+  background-color: transparent 
+  -webkit-text-decoration-skip: objects
+
+a:active,
+a:hover 
+  outline-width: 0
+
+
+/* Text-level semantics ========================================================================== */
+
+abbr[title] 
+  border-bottom: none 
+  text-decoration: underline 
+  text-decoration: underline dotted 
+
+b,
+strong 
+  font-weight: inherit
+
+b,
+strong 
+  font-weight: bolder
+
+dfn 
+  font-style: italic
+
+mark 
+  background-color: #ff0
+  color: #000
+
+small 
+  font-size: 80%
+
+sub,
+sup 
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sub 
+  bottom: -0.25em
+
+sup 
+  top: -0.5em
+
+/* Embedded content ========================================================================== */
+
+img 
+  border-style: none
+
+svg:not(:root) 
+  overflow: hidden
+
+/* Grouping content  ========================================================================== */
+
+code,
+kbd,
+pre,
+samp 
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace
+  font-size: 1em 
+
+figure 
+  margin: 0
+
+hr 
+  box-sizing: content-box 
+  height: 0 
+  overflow: visible 
+
+/* Forms ========================================================================== */
+
+button,
+input,
+select,
+textarea 
+  font: inherit 
+  margin: 0 
+
+optgroup
+  font-weight: bold
+
+table
+  border-spacing: 0
+  border-collapse: collapse
+
+td, th
+  padding: 0
+
+dl
+  margin-top: 0
+  margin-bottom: 20px
+
+dt, dd 
+  line-height: 1.42857143
+
+dt 
+  font-weight: bold
+
+dd 
+  margin-left: 0
+  margin-bottom: 0.5em
+
+button,
+input  
+  overflow: visible
+
+button,
+select  
+  text-transform: none
+
+button,
+html [type="button"], 
+[type="reset"],
+[type="submit"] 
+  -webkit-appearance: button 
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner 
+  border-style: none
+  padding: 0
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring 
+  outline: 1px dotted ButtonText
+
+fieldset
+  min-width: 0
+  padding: 0
+  margin: 0
+  border: 0
+
+legend 
+  box-sizing: border-box 
+  color: inherit 
+  display: table 
+  max-width: 100% 
+  padding: 0
+  border: 0
+  white-space: normal 
+
+textarea 
+  overflow: auto
+
+[type="checkbox"],
+[type="radio"] 
+  box-sizing: border-box 
+  padding: 0 
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button 
+  height: auto
+
+[type="search"] 
+  -webkit-appearance: textfield 
+  outline-offset: -2px 
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration 
+  -webkit-appearance: none
+
+::-webkit-input-placeholder 
+  color: inherit
+  opacity: 0.54
+
+::-webkit-file-upload-button 
+  -webkit-appearance: button 
+  font: inherit 
+
+@-ms-viewport
+  width: device-width
+
+[role="button"]
+  cursor: pointer
+
+/* ========== GLOBAL RESETS ========== */
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html, body
+  height: 100%
+  width: 100%
+  overflow: hidden
+  background: rgba($col-primary,0.06)
+  color: $col-text
+  min-width: 20em
+  font-family: $font-stack
+  font-size: 1em
+  line-height: 1.42857143
+  position: relative
+
+
+/* ========== GENERIC STYLES FOR KEY ELEMENTS ========== */
+
+.as__wrap
+  
+  code 
+    padding: 2px 4px
+    font-size: 0.875em
+    color: $col-boxes-text
+    background-color: $col-boxes
+    border-radius: 4px
+
+  pre 
+    display: block
+    line-height: 1.42857143
+    word-break: break-all
+    word-wrap: break-word
+    margin: 0 0 1em 0
+    padding: 1em
+    background: $col-boxes
+    border: 1px solid $col-borders
+    border-bottom-width: 2px
+    color: $col-boxes-text
+    border-radius: 4px
+    code 
+      padding: 0
+      word-break: normal
+      font-size: 0.875em
+      color: inherit
+      white-space: pre-wrap
+      background-color: transparent
+      border-radius: 0
+
+  dl
+    margin-top: 0
+    margin-bottom: 1em
+
+  dt, dd 
+    line-height: 1.42857143
+  
+  dt 
+    font-weight: bold
+  
+  dd 
+    margin-left: 0
+    margin-bottom: 0.5em
+
+  address 
+    margin-bottom: 1em
+    font-style: normal
+    line-height: 1.42857143
+
+  kbd 
+    padding: 2px 4px
+    font-size: 90%
+    color: $col-background
+    background-color: $col-text
+    border-radius: 3px
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25)
+  
+  kbd kbd 
+    padding: 0
+    font-size: 100%
+    box-shadow: none
+
+  input, button, select, textarea
+    font-family: $font-stack
+    font-size: inherit
+    line-height: inherit
+
+  a 
+    color: $col-primary
+    text-decoration: none
+    &:hover
+      color: $col-tertiary
+    &:focus
+      color: $col-tertiary
+      outline: thin dotted
+      outline: 5px auto -webkit-focus-ring-color
+      outline-offset: -2px
+
+  hr
+    margin-top: 1.5em
+    margin-bottom: 1.5em
+    border: 0
+    border-top: 1px solid $col-borders
+
+  img
+    vertical-align: middle
+
+  canvas
+    display: block
+    max-width: 100%
+    height: auto
+
+  small, .small
+    font-size: 80%
+
+  mark, .mark
+    padding: .2em
+    background-color: tint($col-warning,60%)
+    color: $col-danger
+
+  ul
+    margin-top: 0
+    margin-bottom: 1em
+    padding-left: 1.1em
+
+  ol
+    margin-top: 0
+    margin-bottom: 1em
+    padding-left: 1.4em
+
+  ul ul, ol ul, ul ol, ol ol
+    margin-bottom: 0
+
+  ul li, ol li
+    margin: 0
+    padding: 0
+
+  ul li > i
+    min-width: 1.5em
+
+  table
+    background-color: $col-boxes
+    color: $col-boxes-text
+    col[class*="grid__col--"]
+      position: static
+      display: table-column
+      float: none
+    th
+      text-align: left
+      padding: 0
+    td[class*="grid__col--"], th[class*="grid__col--"]
+      position: static
+      display: table-cell
+      float: none
+      padding: 0
+
+  caption
+    padding-top: 8px
+    padding-bottom: 8px
+    color: rgba($col-text,0.6)
+    text-align: left
+
+  /* TYPOGRAPHY =============== */
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+    font-family: inherit
+    line-height: 1.2
+    color: inherit
+    margin: 0 0 0.875em 0
+
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small
+    font-weight: normal
+    line-height: 1
+    opacity: 0.7
+
+  h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small
+    font-size: 70%
+
+  h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small
+    font-size: 80%
+
+  h1, .h1
+    font-weight: 300
+    font-size: 3.2em
+    margin-top: 0em
+    margin-bottom: 0.4em
+
+  h2, .h2
+    font-size: 2.1em
+    margin-bottom: 0.5em
+
+  h3, .h3
+    font-size: 1.5em
+    margin-bottom: 0.75em
+
+  h4, .h4
+    font-size: 1.1em
+
+  h5, .h5
+    font-size: 0.9em
+
+  h6, .h6
+    font-size: 0.875em
+    text-transform: uppercase
+    margin-bottom: 1em
+
+  p, .p
+    font-size: 1em
+    line-height: 1.6
+    margin: 0em 0 1em 0
+
+  blockquote 
+    padding: 0.875em 1.5em
+    margin: 0 0 2em 0
+    font-size: 1.2em
+    border-left: 5px solid $col-borders
+    background: $col-boxes
+  
+  blockquote:before,
+  blockquote:after 
+    content: ''
+
+  blockquote p:last-child,
+  blockquote ul:last-child,
+  blockquote ol:last-child 
+    margin-bottom: 0
+
+  blockquote footer,
+  blockquote small,
+  blockquote .small 
+    display: block
+    font-size: 80%
+    line-height: 1.42857143
+    color: #777777
+
+  blockquote footer:before,
+  blockquote small:before,
+  blockquote .small:before 
+    content: '\2014 \00A0'
+
+  /* FORMS =============== */
+
+  legend
+    display: block
+    width: 100%
+    padding: 0
+    margin-bottom: 1em
+    font-size: 1.5em
+    line-height: inherit
+    color: $col-boxes-text
+    border: 0
+    border-bottom: 1px solid $col-borders
+
+  label
+    display: inline-block
+    max-width: 100%
+    margin-bottom: 5px
+    font-weight: bold
+    font-size: 14px
+
+  label .label
+    position: relative
+    top: -2px
+
+  input
+    &[type="search"]
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      -webkit-appearance: none
+    &[type="radio"], &[type="checkbox"]
+      margin: 4px 0 0
+      margin-top: 1px \9
+      line-height: normal
+    &[type="file"]
+      display: block
+      width: 100%
+      overflow: hidden
+    &[type="file"]:focus, &[type="radio"]:focus, &[type="checkbox"]:focus
+      outline: thin dotted
+      outline: 5px auto -webkit-focus-ring-color
+      outline-offset: -2px
+    &[type="color"]
+      -webkit-appearance: none
+      padding: 0
+      border: none
+      box-shadow: none
+    &[type="radio"][disabled], &[type="checkbox"][disabled], &[type="radio"].disabled, &[type="checkbox"].disabled
+      cursor: not-allowed
+    &[type="range"]
+      -webkit-appearance: none
+      display: block
+      width: 100%
+      margin: 0 0
+      &:focus
+        outline: none
+      &::-webkit-slider-runnable-track
+        width: 100%
+        height: 10px
+        cursor: pointer
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 1px rgba(13, 13, 13, 0.25)
+        background: $col-background
+        border-radius: 1px
+        border: 0px solid $col-borders
+      &::-webkit-slider-thumb
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 1px rgba(13, 13, 13, 0.25)
+        border: 0px solid $col-borders
+        height: 34px
+        width: 24px
+        border-radius: 3px
+        background: $col-primary
+        cursor: pointer
+        -webkit-appearance: none
+        margin-top: -12px
+      &:focus::-webkit-slider-runnable-track
+        background: $col-borders
+      &::-moz-range-track
+        width: 100%
+        height: 10px
+        cursor: pointer
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 1px rgba(13, 13, 13, 0.25)
+        background: $col-background
+        border-radius: 1px
+        border: 0px solid $col-borders
+      &::-moz-range-thumb
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 1px rgba(13, 13, 13, 0.25)
+        border: 0px solid rgba(0, 0, 0, 0)
+        height: 34px
+        width: 24px
+        border-radius: 3px
+        background: $col-primary
+        cursor: pointer
+      &::-ms-track
+        width: 100%
+        height: 10px
+        cursor: pointer
+        background: transparent
+        border-color: transparent
+        color: transparent
+      &::-ms-fill-lower, &::-ms-fill-upper
+        background: #f5f5f5
+        border: 0px solid $col-borders
+        border-radius: 2px
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 1px rgba(13, 13, 13, 0.25)
+      &::-ms-thumb
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25), inset 0px 0px 1px rgba(13, 13, 13, 0.25)
+        border: 0px solid rgba(0, 0, 0, 0)
+        height: 34px
+        width: 24px
+        border-radius: 3px
+        background: $col-primary
+        cursor: pointer
+        height: 10px
+      &:focus
+        &::-ms-fill-lower, &::-ms-fill-upper
+          background: $col-background
+
+  select
+    &[multiple], &[size]
+      height: auto
+      min-height: 12em
+
+  output
+    display: block
+    padding-top: 0.25em
+    font-size: 0.875em
+    line-height: 1.42857143
+    color: $col-borders
+        
+
