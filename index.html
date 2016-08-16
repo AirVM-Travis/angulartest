@@ -1,13 +1,21 @@
 <html>
 
   <head>
-    <title>Angular 2 QuickStart</title>
+    <title>Angular2 FTW </title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/as-core.css">
     <link rel="stylesheet" href="css/as-icons.css" />
     <link rel="stylesheet" href="css/addon/font-awesome.min.css" />
+
+    <style>
+      .as__wrap input[autoGrow] {
+        -webkit-transition: width .314159s ease-in-out !important;
+        -o-transition: width .314159s ease-in-out !important;
+        transition: width .314159s ease-in-out !important;
+      }
+    </style>
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
@@ -37,15 +45,18 @@
 
   <!-- 3. Display the application -->
   <body>
+    <div class="as__wrap">
+    
     <my-app>
-      <div class="as__wrap">
+      
       <div class="loading">
         <div class="loading__spinner">
           <div class="loading__spinner__mid"></div>
         </div>
       </div><!-- end loading -->
-      </div><!-- end as__wrap -->
+      
     </my-app>
+    </div><!-- end as__wrap -->
   </body>
 
 </html>

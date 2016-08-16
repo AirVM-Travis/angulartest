@@ -382,14 +382,14 @@ html, body {
     font-size: 80%; }
   .as__wrap h1, .as__wrap .h1 {
     font-weight: 300;
-    font-size: 3.2em;
+    font-size: 2.4em;
     margin-top: 0em;
     margin-bottom: 0.4em; }
   .as__wrap h2, .as__wrap .h2 {
-    font-size: 2.1em;
+    font-size: 1.6em;
     margin-bottom: 0.5em; }
   .as__wrap h3, .as__wrap .h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 0.75em; }
   .as__wrap h4, .as__wrap .h4 {
     font-size: 1.1em; }

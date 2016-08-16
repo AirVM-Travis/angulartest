@@ -7,7 +7,7 @@ import {AutoGrowDirective} from './auto-grow.directive'
 	template: `
 		<h2>{{title}}</h2>
 		<p>{{ desc }}</p>
-		<label> Search Courses: <input type="text" width="80" autoGrow /></label> 
+		<form><label> Search Courses: <input class="form__control" type="text" autoGrow style="width:80" /></label></form> 
 		<ul>
 			<li *ngFor="#course of courses">
 			{{course}}

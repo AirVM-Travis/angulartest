@@ -30,7 +30,7 @@ System.register(['angular2/core', './author.service'], function(exports_1, conte
                 AuthorsComponent = __decorate([
                     core_1.Component({
                         selector: 'authors',
-                        template: "\n\t\t<h2>{{title}}</h2>\n\t\t<p>{{desc}}</p>\n\t\t<ul>\n\t\t\t<li *ngFor=\"#author of authors\">\n\t\t\t\t{{author}}\n\t\t\t</li>\n\t\t</ul>\n\t\t",
+                        template: "\n\t\t<h2>{{title}}</h2>\n\t\t<p>{{desc}}</p>\n\t\t<ul class=\"list\">\n\t\t\t<li *ngFor=\"#author of authors\">\n\t\t\t\t{{author}}\n\t\t\t</li>\n\t\t</ul>\n\t\t",
                         providers: [author_service_1.AuthorService]
                     }), 
                     __metadata('design:paramtypes', [author_service_1.AuthorService])

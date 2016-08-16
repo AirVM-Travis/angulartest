@@ -30,7 +30,7 @@ System.register(['angular2/core', './courses.component', './authors.component'],
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "<h1>Welcome to Angular2!</h1>\n    \t<courses></courses>\n    \t<hr>\n    \t<authors></authors>",
+                        template: "\n    \t<header class=\"header\"> </header>\n\t\t\n\t\t<section class=\"main\">\t\n\t\t\t<div class=\"main__nav\">\n\t\t\t\t<nav id=\"menu\" class=\"main__nav__menu\">\n\t\t\t\t</nav>\n\n\t\t\t\t<div class=\"main__nav__mask\"></div>\n\n\t\t\t</div> <!-- / main__nav -->\n\t\t\t<div class=\"main__content\">\n\n\t\t\t\t<div class=\"main__content__inner\">\n\n\t\t\t\t\t<div class=\"grid\">\n\n\t\t\t\t\t\t<h1>Welcome to Angular2!</h1>\n\t\t\t\t\t\t<courses></courses>\n\t\t\t\t\t\t<hr>\n\t\t\t\t\t\t<authors></authors>\n\t\t\t\t\t</div><!-- end container -->\n\t\t\t\t</div><!-- /main__content__inner -->\n\t\t\t</div><!-- end main__content -->\n\t\t</section>\n\t\t<footer class=\"footer\">\n\t\t<div class=\"brand\">\n\t\t\t<span class=\"brand__label hidden--sm hidden--xs\">\"Aura\" Angular Prototype <small>v.0.1</small></span>\n\t\t</div><!-- end foot-left -->\n\t\t</footer>\n\t    ",
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
